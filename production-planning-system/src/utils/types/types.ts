@@ -3,18 +3,19 @@ export type PackagingBatchType = {
   line: Line,
   shift: Shift,
   product: ProductType,
-  batchNumber: String,
-  orderNumber: String,
+  batchNumber: string,
+  orderNumber: string,
   timeStart: Date,
   timeEnd: Date,
-  goodPacks: Number,
-  badPacks: Number,
-  batchNumberSap: String,
-  isBatchCompletedSap: Boolean,
+  goodPacks: number,
+  badPacks: number,
+  batchNumberSap: string,
+  isBatchCompletedSap: boolean,
 }
 
 
 export type PackagingStageType = {
+  id: string,
   packagingBatch: PackagingBatchType,
   packagingLosses: PackagingLossesType,
 }
@@ -27,38 +28,38 @@ export type PackagingLossesType = {
 }
 
 export type PackagingAvailabilityLossesType = {
-  cleaningTimeInMinutes: Number,
-  settingUpOrChangingFormatTimeInMinutes: Number,
-  repairTimeInMinutes: Number,
-  testsTimeInMinutes: Number,
-  staffShortageTimeInMinutes: Number,
-  waitingForMaterialTimeInMinutes: Number,
-  calculatingMaterialBalanceTimeInMinutes: Number,
-  manualAggregationTimeInMinutes: Number,
-  otherTimeInMinutes: Number,
+  cleaningTimeInMinutes: number,
+  settingUpOrChangingFormatTimeInMinutes: number,
+  repairTimeInMinutes: number,
+  testsTimeInMinutes: number,
+  staffShortageTimeInMinutes: number,
+  waitingForMaterialTimeInMinutes: number,
+  calculatingMaterialBalanceTimeInMinutes: number,
+  manualAggregationTimeInMinutes: number,
+  otherTimeInMinutes: number,
 }
 
 export type PackagingPerformanceLossesType = {
-  packagingMaterialTimeInMinutes: Number,
-  semiFinishedProductTimeInMinutes: Number,
-  lossSpeedTimeInMinutes: Number,
-  replacementOfMaterialTimeInMinutes: Number,
-  settingsDuringOperationTimeInMinutes: Number,
-  shortStopsTimeInMinutes: Number,
-  longStopsTimeInMinutes: Number,
-  otherTimeInMinutes: Number,
-  nonDistributedDowntimeInMinutes: Number,
+  packagingMaterialTimeInMinutes: number,
+  semiFinishedProductTimeInMinutes: number,
+  lossSpeedTimeInMinutes: number,
+  replacementOfMaterialTimeInMinutes: number,
+  settingsDuringOperationTimeInMinutes: number,
+  shortStopsTimeInMinutes: number,
+  longStopsTimeInMinutes: number,
+  otherTimeInMinutes: number,
+  nonDistributedDowntimeInMinutes: number,
 }
 
 export type PackagingQualityLossesType = {
-  repackingTimeInMinutes: Number,
+  repackingTimeInMinutes: number,
 }
 
 export type PackagingScheduledDowntimeType = {
- notOrdersTimeInMinutes: Number,
- lunchOrBreakOrTrainingTimeInMinutes: Number,
- technicalMaintenanceTimeInMinutes: Number,
- otherTimeInMinutes: Number,
+ notOrdersTimeInMinutes: number,
+ lunchOrBreakOrTrainingTimeInMinutes: number,
+ technicalMaintenanceTimeInMinutes: number,
+ otherTimeInMinutes: number,
 }
 
 
@@ -82,10 +83,10 @@ export enum Product {
 }
 
 export type ProductType = {
-  version: Number,
-  gtin: String,
+  version: number,
+  gtin: string,
   title: {
-    ru: String,
-    en: String,
+    ru: string,
+    en: string,
   },
 }

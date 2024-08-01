@@ -7,6 +7,7 @@ import PackagingCompletedOrdersComponent from './components/packaging-components
 import Navigation from './components/navigation-component/navigation-component';
 import { NavItem } from './utils/constants/constants';
 
+
 const App: React.FC = () => {
   const navItems: NavItem[] = [
     { label: 'Home', path: '/' },
@@ -14,18 +15,18 @@ const App: React.FC = () => {
   ];
 
 
-  return (
-    <BrowserRouter>
-      <Navigation items={navItems} />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/packaging' element={<PackagingPage />}>
-          <Route path='current-orders' element={<PackagingCurrentOrdersComponent />} />
-          <Route path='completed-orders' element={<PackagingCompletedOrdersComponent />} />          
-        </Route>
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+  return (    
+      <BrowserRouter>
+        <Navigation items={navItems} />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/packaging' element={<PackagingPage />}>
+            <Route path='current-orders' element={<PackagingCurrentOrdersComponent />} />
+            <Route path='completed-orders' element={<PackagingCompletedOrdersComponent />} />          
+          </Route>
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
   );
 };
 

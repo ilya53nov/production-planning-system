@@ -1,0 +1,1315 @@
+{
+  "batches": [
+    {
+      "id": "123",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss1",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss2",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss3",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss4",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss5",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss6",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss7",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss8",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss9",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss10",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss11",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss12",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss13",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss14",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss15",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss16",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss17",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss18",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss19",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss20",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss21",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "sss22",
+      "packagingBatch": {
+        "date": "31.07.2024",
+        "line": "IMA 1",
+        "shift": "1",
+        "product": {
+          "version": 1,
+          "gtin": "32432212433",
+          "title": {
+            "ru": "Сиофор 1000",
+            "en": "Siofor 1000"
+          }
+        },
+        "batchNumber": "0320724",
+        "orderNumber": "1024401",
+        "timeStart": "07:30",
+        "timeEnd": "15:30",
+        "goodPacks": 6928,
+        "badPacks": 34,
+        "batchNumberSap": "12PHG",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 10,
+          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { Line, PackagingStageType, Shift } from "../types/types";
 
 export const packagingBatchesMock: PackagingStageType[] = [
   {
+    id: 'fdgfdgfd',
     packagingBatch: {
       date: new Date(),
       line: Line.Ima1,
