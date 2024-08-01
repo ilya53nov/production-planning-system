@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
+    "@tanstack/react-form": "^0.26.4",
     "@tanstack/react-query": "^5.51.16",
     "axios": "^1.7.2",
     "react": "^18.3.1",

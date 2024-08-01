@@ -9,6 +9,14 @@ class BatchService {
     return axios.get<PackagingStageType[]>(`${BASE_URL}/batches`)
   }
 
+  getComletedBatches() {
+    return axios.get<PackagingStageType[]>(`${BASE_URL}/batches?packagingBatch.isBatchCompletedSap=true`)
+  }
+
+  getNotComletedBatches() {
+    return axios.get<PackagingStageType[]>(`${BASE_URL}/batches?packagingBatch.isBatchCompletedSap=false`)
+  }
+
   getBatch(id: string) {
     return axios.get(`${BASE_URL}/batches/${id}`)
   }
@@ -18,7 +26,7 @@ class BatchService {
   }
 }
 
-export const  batchService = new BatchService()
+export const batchService = new BatchService()
 
 
 

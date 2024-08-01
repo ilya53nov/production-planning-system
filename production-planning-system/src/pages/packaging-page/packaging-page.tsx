@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PackagingCurrentOrdersComponent from "../../components/packaging-components/current-orders-component/current-orders-component";
 import PackagingCompletedOrdersComponent from "../../components/packaging-components/completed-orders-component/completed-orders-component";
+import CurrentOrdersListComponent from "./components/current-orders-list/current-orders-list-component";
 
 const PackagingPage: React.FC = () => {
 
@@ -18,7 +18,7 @@ const PackagingPage: React.FC = () => {
         </li>
       </ul>
 
-      {currentTab === 'current-orders' ? <PackagingCurrentOrdersComponent /> : ''}
+      {currentTab === 'current-orders' ? <CurrentOrdersListComponent /> : ''}
       {currentTab === 'completed-orders' ? <PackagingCompletedOrdersComponent /> : ''}
     </div>
 

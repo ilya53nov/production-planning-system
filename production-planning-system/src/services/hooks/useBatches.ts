@@ -16,7 +16,23 @@ export function useCreateBatch() {
     mutationKey: ['createBatch'],
     mutationFn: batchService.createBatch,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['batches'] })
+      queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
     },
+  })
+}
+
+export function useGetCompletedBatches() {
+  return useQuery({
+    queryKey: ['completedBatches'],
+    queryFn: batchService.getComletedBatches,
+    select: data => data.data,    
+  })
+}
+
+export function useGetNotCompletedBatches() {
+  return useQuery({
+    queryKey: ['notCompletedBatches'],
+    queryFn: batchService.getNotComletedBatches,
+    select: data => data.data,    
   })
 }

@@ -1,23 +1,23 @@
 export type PackagingBatchType = {
-  date: Date,
-  line: Line,
-  shift: Shift,
-  product: ProductType,
-  batchNumber: string,
-  orderNumber: string,
-  timeStart: Date,
-  timeEnd: Date,
-  goodPacks: number,
-  badPacks: number,
-  batchNumberSap: string,
-  isBatchCompletedSap: boolean,
+  date?: Date,
+  line?: Line,
+  shift?: Shift,
+  product?: ProductType,
+  batchNumber?: string,
+  orderNumber?: string,
+  timeStart?: Date,
+  timeEnd?: Date,
+  goodPacks?: number,
+  badPacks?: number,
+  batchNumberSap?: string,
+  isBatchCompletedSap?: boolean,
 }
 
 
 export type PackagingStageType = {
   id: string,
-  packagingBatch: PackagingBatchType,
-  packagingLosses: PackagingLossesType,
+  packagingBatch?: PackagingBatchType,
+  packagingLosses?: PackagingLossesType,
 }
 
 export type PackagingLossesType = {

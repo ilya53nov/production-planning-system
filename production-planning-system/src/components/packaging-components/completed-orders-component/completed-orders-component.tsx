@@ -1,9 +1,7 @@
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useBatches, useCreateBatch } from "../../../services/hooks/useBatches";
+import { useCreateBatch, useGetCompletedBatches,  } from "../../../services/hooks/useBatches";
 
 const PackagingCompletedOrdersComponent: React.FC = () => {
-  const {data: batches, isLoading, isSuccess, isError, error} = useBatches();
+  const {data: batches, isLoading, isSuccess, isError, error} = useGetCompletedBatches();
   const mutation = useCreateBatch();
 
   if (isLoading) {
@@ -27,7 +25,6 @@ const PackagingCompletedOrdersComponent: React.FC = () => {
           })}
         </ul>
 
-        <ToastContainer />
       </div>
   
     )
