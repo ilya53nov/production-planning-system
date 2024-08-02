@@ -1,5 +1,6 @@
 import axios from "axios";
-import { PackagingStageType } from "../../utils/types/types";
+import { MasterData, PackagingStageType } from "../../utils/types/types";
+import { v4 as uuidv4 } from 'uuid';
 
 export const BASE_URL = 'http://localhost:3123';
 
@@ -22,11 +23,27 @@ class BatchService {
   }
 
   createBatch(batch: PackagingStageType) {
-    return axios.post(`${BASE_URL}/batches`, batch)
+    const id = uuidv4();
+    return axios.post(`${BASE_URL}/batches`, {...batch, id})
+  }
+
+  updateBatch(batch: PackagingStageType) {
+    return axios.patch(`${BASE_URL}/batches/${batch.id}`, batch)
   }
 }
 
 export const batchService = new BatchService()
+
+
+
+class MasterDataService {
+
+  getMasterData() {
+    return axios.get<MasterData[]>(`${BASE_URL}/masterData`)
+  }
+}
+
+export const masterDataService = new MasterDataService()
 
 
 

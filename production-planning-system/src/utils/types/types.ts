@@ -1,21 +1,21 @@
 export type PackagingBatchType = {
-  date?: Date,
-  line?: Line,
-  shift?: Shift,
-  product?: ProductType,
-  batchNumber?: string,
-  orderNumber?: string,
-  timeStart?: Date,
-  timeEnd?: Date,
-  goodPacks?: number,
-  badPacks?: number,
-  batchNumberSap?: string,
-  isBatchCompletedSap?: boolean,
+  date?: Date | undefined,
+  line?: Line | undefined,
+  shift?: Shift | undefined,
+  product?: ProductType | undefined,
+  batchNumber?: string | undefined,
+  orderNumber?: string | undefined,
+  timeStart?: Date | undefined,
+  timeEnd?: Date | undefined,
+  goodPacks?: number | undefined,
+  badPacks?: number | undefined,
+  batchNumberSap?: string | undefined,
+  isBatchCompletedSap?: boolean | undefined,
 }
 
 
 export type PackagingStageType = {
-  id: string,
+  id?: string | undefined,
   packagingBatch?: PackagingBatchType,
   packagingLosses?: PackagingLossesType,
 }
@@ -83,6 +83,16 @@ export enum Product {
 }
 
 export type ProductType = {
+  version: number,
+  gtin: string,
+  title: {
+    ru: string,
+    en: string,
+  },
+}
+
+export type MasterData = {
+  id: string,
   version: number,
   gtin: string,
   title: {

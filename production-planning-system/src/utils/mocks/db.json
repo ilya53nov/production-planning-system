@@ -1,64 +1,63 @@
 {
-  "batches": [
+  "masterData": [
     {
-      "id": "123",
-      "packagingBatch": {
-        "date": "31.07.2024",
-        "line": "IMA 1",
-        "shift": "1",
-        "product": {
-          "version": 1,
-          "gtin": "32432212433",
-          "title": {
-            "ru": "Сиофор 1000",
-            "en": "Siofor 1000"
-          }
-        },
-        "batchNumber": "0320724",
-        "orderNumber": "1024401",
-        "timeStart": "07:30",
-        "timeEnd": "15:30",
-        "goodPacks": 6928,
-        "badPacks": 34,
-        "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": false
-      },
-      "packagingLosses": {
-        "packagingAvailabilityLosses": {
-          "cleaningTimeInMinutes": 10,
-          "settingUpOrChangingFormatTimeInMinutes": 15,
-          "repairTimeInMinutes": 0,
-          "testsTimeInMinutes": 0,
-          "staffShortageTimeInMinutes": 0,
-          "waitingForMaterialTimeInMinutes": 0,
-          "calculatingMaterialBalanceTimeInMinutes": 0,
-          "manualAggregationTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        },
-        "packagingPerformanceLosses": {
-          "packagingMaterialTimeInMinutes": 0,
-          "semiFinishedProductTimeInMinutes": 0,
-          "lossSpeedTimeInMinutes": 0,
-          "replacementOfMaterialTimeInMinutes": 0,
-          "settingsDuringOperationTimeInMinutes": 0,
-          "shortStopsTimeInMinutes": 0,
-          "longStopsTimeInMinutes": 0,
-          "otherTimeInMinutes": 0,
-          "nonDistributedDowntimeInMinutes": 0
-        },
-        "packagingQualityLosses": {
-          "repackingTimeInMinutes": 0
-        },
-        "packagingScheduledDowntime": {
-          "notOrdersTimeInMinutes": 0,
-          "lunchOrBreakOrTrainingTimeInMinutes": 0,
-          "technicalMaintenanceTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        }
+      "id": "1",
+      "version": 1,
+      "gtin": "04630011650589",
+      "title": {
+        "ru": "Сиофор 500",
+        "en": "Siofor 500"
       }
     },
     {
-      "id": "sss1",
+      "id": "2",
+      "version": 1,
+      "gtin": "04630011650220",
+      "title": {
+        "ru": "Сиофор 850",
+        "en": "Siofor 850"
+      }
+    },
+    {
+      "id": "3",
+      "version": 1,
+      "gtin": "04630011650602",
+      "title": {
+        "ru": "Сиофор 1000",
+        "en": "Siofor 1000"
+      }
+    },
+    {
+      "id": "4",
+      "version": 1,
+      "gtin": "04630011650428",
+      "title": {
+        "ru": "Мезим 20",
+        "en": "Mezum 20"
+      }
+    },
+    {
+      "id": "5",
+      "version": 1,
+      "gtin": "04630011650435",
+      "title": {
+        "ru": "Мезим 80",
+        "en": "Mezum 80"
+      }
+    },
+    {
+      "id": "6",
+      "version": 1,
+      "gtin": "04630011650084",
+      "title": {
+        "ru": "Простамол 30",
+        "en": "Prostamol 30"
+      }
+    }
+  ],
+  "batches": [
+    {
+      "id": "123",
       "packagingBatch": {
         "date": "31.07.2024",
         "line": "IMA 1",
@@ -115,123 +114,9 @@
       }
     },
     {
-      "id": "sss1",
+      "id": "20407776-0797-430b-b5e4-98393910219d",
       "packagingBatch": {
-        "date": "31.07.2024",
-        "line": "IMA 1",
-        "shift": "1",
-        "product": {
-          "version": 1,
-          "gtin": "32432212433",
-          "title": {
-            "ru": "Сиофор 1000",
-            "en": "Siofor 1000"
-          }
-        },
-        "batchNumber": "0320724",
-        "orderNumber": "1024401",
-        "timeStart": "07:30",
-        "timeEnd": "15:30",
-        "goodPacks": 6928,
-        "badPacks": 34,
-        "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": false
-      },
-      "packagingLosses": {
-        "packagingAvailabilityLosses": {
-          "cleaningTimeInMinutes": 10,
-          "settingUpOrChangingFormatTimeInMinutes": 15,
-          "repairTimeInMinutes": 0,
-          "testsTimeInMinutes": 0,
-          "staffShortageTimeInMinutes": 0,
-          "waitingForMaterialTimeInMinutes": 0,
-          "calculatingMaterialBalanceTimeInMinutes": 0,
-          "manualAggregationTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        },
-        "packagingPerformanceLosses": {
-          "packagingMaterialTimeInMinutes": 0,
-          "semiFinishedProductTimeInMinutes": 0,
-          "lossSpeedTimeInMinutes": 0,
-          "replacementOfMaterialTimeInMinutes": 0,
-          "settingsDuringOperationTimeInMinutes": 0,
-          "shortStopsTimeInMinutes": 0,
-          "longStopsTimeInMinutes": 0,
-          "otherTimeInMinutes": 0,
-          "nonDistributedDowntimeInMinutes": 0
-        },
-        "packagingQualityLosses": {
-          "repackingTimeInMinutes": 0
-        },
-        "packagingScheduledDowntime": {
-          "notOrdersTimeInMinutes": 0,
-          "lunchOrBreakOrTrainingTimeInMinutes": 0,
-          "technicalMaintenanceTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        }
-      }
-    },
-    {
-      "id": "sss2",
-      "packagingBatch": {
-        "date": "31.07.2024",
-        "line": "IMA 1",
-        "shift": "1",
-        "product": {
-          "version": 1,
-          "gtin": "32432212433",
-          "title": {
-            "ru": "Сиофор 1000",
-            "en": "Siofor 1000"
-          }
-        },
-        "batchNumber": "0320724",
-        "orderNumber": "1024401",
-        "timeStart": "07:30",
-        "timeEnd": "15:30",
-        "goodPacks": 6928,
-        "badPacks": 34,
-        "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": false
-      },
-      "packagingLosses": {
-        "packagingAvailabilityLosses": {
-          "cleaningTimeInMinutes": 10,
-          "settingUpOrChangingFormatTimeInMinutes": 15,
-          "repairTimeInMinutes": 0,
-          "testsTimeInMinutes": 0,
-          "staffShortageTimeInMinutes": 0,
-          "waitingForMaterialTimeInMinutes": 0,
-          "calculatingMaterialBalanceTimeInMinutes": 0,
-          "manualAggregationTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        },
-        "packagingPerformanceLosses": {
-          "packagingMaterialTimeInMinutes": 0,
-          "semiFinishedProductTimeInMinutes": 0,
-          "lossSpeedTimeInMinutes": 0,
-          "replacementOfMaterialTimeInMinutes": 0,
-          "settingsDuringOperationTimeInMinutes": 0,
-          "shortStopsTimeInMinutes": 0,
-          "longStopsTimeInMinutes": 0,
-          "otherTimeInMinutes": 0,
-          "nonDistributedDowntimeInMinutes": 0
-        },
-        "packagingQualityLosses": {
-          "repackingTimeInMinutes": 0
-        },
-        "packagingScheduledDowntime": {
-          "notOrdersTimeInMinutes": 0,
-          "lunchOrBreakOrTrainingTimeInMinutes": 0,
-          "technicalMaintenanceTimeInMinutes": 0,
-          "otherTimeInMinutes": 0
-        }
-      }
-    },
-    {
-      "id": "wer2",
-      "packagingBatch": {
-        "date": "2024-08-01T20:55:10.619Z",
+        "date": "2024-08-02T08:13:11.430Z",
         "line": "IMA 1",
         "shift": 1,
         "product": {
@@ -242,14 +127,14 @@
             "en": "Siofor 1000"
           }
         },
-        "batchNumber": "54645",
+        "batchNumber": "5555",
         "orderNumber": "1024401",
-        "timeStart": "2024-08-01T20:55:10.619Z",
-        "timeEnd": "2024-08-01T20:55:10.619Z",
+        "timeStart": "2024-08-02T08:13:11.430Z",
+        "timeEnd": "2024-08-02T08:13:11.430Z",
         "goodPacks": 6928,
         "badPacks": 34,
         "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": false
+        "isBatchCompletedSap": true
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
@@ -286,32 +171,253 @@
       }
     },
     {
-      "id": "fdgfdgfd",
+      "id": "0c1e9d93-ef48-40cd-8611-0d9c92a1bfdb",
       "packagingBatch": {
-        "date": "2024-08-01T20:56:49.135Z",
-        "line": "IMA 1",
-        "shift": 1,
         "product": {
+          "id": "3",
           "version": 1,
-          "gtin": "32432212433",
+          "gtin": "04630011650602",
           "title": {
             "ru": "Сиофор 1000",
             "en": "Siofor 1000"
           }
         },
-        "batchNumber": "67678967",
-        "orderNumber": "1024401",
-        "timeStart": "2024-08-01T20:56:49.135Z",
-        "timeEnd": "2024-08-01T20:56:49.135Z",
-        "goodPacks": 6928,
-        "badPacks": 34,
-        "batchNumberSap": "12PHG",
+        "batchNumber": "0410824",
+        "orderNumber": "1025422",
+        "timeStart": "2024-08-02T10:56:36.836Z",
+        "timeEnd": "2024-08-02T10:56:36.836Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "12800",
+        "isBatchCompletedSap": true
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "98519934-322f-408c-bb53-1e868f0d8ab2",
+      "packagingBatch": {
+        "product": {
+          "id": "4",
+          "version": 1,
+          "gtin": "04630011650428",
+          "title": {
+            "ru": "Мезим 20",
+            "en": "Mezum 20"
+          }
+        },
+        "batchNumber": "0420824",
+        "orderNumber": "1025423",
+        "timeStart": "2024-08-02T10:56:36.836Z",
+        "timeEnd": "2024-08-02T10:56:36.836Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "127ZZ",
         "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
-          "cleaningTimeInMinutes": 10,
-          "settingUpOrChangingFormatTimeInMinutes": 15,
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "501640f0-3581-445e-bfee-10ee275a05ed",
+      "packagingBatch": {
+        "line": "IMA 1",
+        "product": {
+          "id": "1",
+          "version": 1,
+          "gtin": "04630011650589",
+          "title": {
+            "ru": "Сиофор 500",
+            "en": "Siofor 500"
+          }
+        },
+        "batchNumber": "212322",
+        "orderNumber": "1025422",
+        "timeStart": "2024-08-02T12:28:09.076Z",
+        "timeEnd": "2024-08-02T12:28:09.076Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "65765",
+        "isBatchCompletedSap": true
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "1ca52e79-f2ef-4852-922a-f3bf9a38bc3a",
+      "packagingBatch": {
+        "line": "IMA 2",
+        "product": {
+          "id": "6",
+          "version": 1,
+          "gtin": "04630011650084",
+          "title": {
+            "ru": "Простамол 30",
+            "en": "Prostamol 30"
+          }
+        },
+        "batchNumber": "212322",
+        "orderNumber": "1025422",
+        "timeStart": "2024-08-02T13:31:42.056Z",
+        "timeEnd": "2024-08-02T13:31:42.056Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "65765",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "ad6d9734-0c64-435b-9aea-0d21c368cfa3",
+      "packagingBatch": {
+        "line": "IMA 2",
+        "product": {
+          "id": "4",
+          "version": 1,
+          "gtin": "04630011650428",
+          "title": {
+            "ru": "Мезим 20",
+            "en": "Mezum 20"
+          }
+        },
+        "batchNumber": "212322",
+        "orderNumber": "1025422",
+        "timeStart": "2024-08-02T13:50:34.540Z",
+        "timeEnd": "2024-08-02T13:50:34.540Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "gggggff",
+        "isBatchCompletedSap": true
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
           "repairTimeInMinutes": 0,
           "testsTimeInMinutes": 0,
           "staffShortageTimeInMinutes": 0,
