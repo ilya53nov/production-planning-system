@@ -18,13 +18,18 @@ class BatchService {
     return axios.get<PackagingStageType[]>(`${BASE_URL}/batches?packagingBatch.isBatchCompletedSap=false`)
   }
 
-  getBatch(id: string) {
+  getBatchById(id: string) {
     return axios.get(`${BASE_URL}/batches/${id}`)
   }
 
   createBatch(batch: PackagingStageType) {
     const id = uuidv4();
     return axios.post(`${BASE_URL}/batches`, {...batch, id})
+  }
+
+  createBatchDetail(batch: PackagingStageType) {
+    //const id = uuidv4();
+    return axios.patch(`${BASE_URL}/batches/${batch.id}`, batch)
   }
 
   updateBatch(batch: PackagingStageType) {

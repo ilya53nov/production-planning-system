@@ -1,12 +1,12 @@
-import { Line, PackagingStageType, Shift } from "../types/types";
+import { Line, PackagingStageType } from "../types/types";
 
 export const packagingBatchesMock: PackagingStageType[] = [
   {
     id: 'fdgfdgfd',
     packagingBatch: {
-      date: new Date(),
+      //date: new Date(),
       line: Line.Ima1,
-      shift: Shift.Morning,
+      //shift: Shift.Morning,
       product: {
         version: 1,
         gtin: '32432212433',
@@ -17,8 +17,8 @@ export const packagingBatchesMock: PackagingStageType[] = [
       },
       batchNumber: '0320724',
       orderNumber: '1024401',
-      timeStart: new Date(),
-      timeEnd: new Date(),
+      //timeStart: new Date(),
+      //timeEnd: new Date(),
       goodPacks: 6928,
       badPacks: 34,
       batchNumberSap: '12PHG',

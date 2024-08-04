@@ -71,13 +71,13 @@
           }
         },
         "batchNumber": "0320724",
-        "orderNumber": "1024401",
+        "orderNumber": "10244010",
         "timeStart": "07:30",
         "timeEnd": "15:30",
         "goodPacks": 6928,
         "badPacks": 34,
         "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": true
+        "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
@@ -128,13 +128,13 @@
           }
         },
         "batchNumber": "5555",
-        "orderNumber": "1024401",
+        "orderNumber": "102440101",
         "timeStart": "2024-08-02T08:13:11.430Z",
         "timeEnd": "2024-08-02T08:13:11.430Z",
         "goodPacks": 6928,
         "badPacks": 34,
         "batchNumberSap": "12PHG",
-        "isBatchCompletedSap": true
+        "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
@@ -189,7 +189,7 @@
         "goodPacks": 0,
         "badPacks": 0,
         "batchNumberSap": "12800",
-        "isBatchCompletedSap": true
+        "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
@@ -300,7 +300,7 @@
         "goodPacks": 0,
         "badPacks": 0,
         "batchNumberSap": "65765",
-        "isBatchCompletedSap": true
+        "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {
@@ -412,7 +412,230 @@
         "goodPacks": 0,
         "badPacks": 0,
         "batchNumberSap": "gggggff",
-        "isBatchCompletedSap": true
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "38e0bbbd-e060-4afa-b77f-a853c2b26b42",
+      "packagingBatch": {
+        "line": "IMA 3",
+        "product": {
+          "id": "1",
+          "version": 1,
+          "gtin": "04630011650589",
+          "title": {
+            "ru": "Сиофор 500",
+            "en": "Siofor 500"
+          }
+        },
+        "batchNumber": "2222",
+        "orderNumber": "1111",
+        "timeStart": "2024-08-02T15:57:50.989Z",
+        "timeEnd": "2024-08-02T15:57:50.989Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "3421",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "08043f61-8ab7-49ab-a837-b54b74789206",
+      "packagingBatch": {
+        "line": "IMA 1",
+        "product": {
+          "id": "1",
+          "version": 1,
+          "gtin": "04630011650589",
+          "title": {
+            "ru": "Сиофор 500",
+            "en": "Siofor 500"
+          }
+        },
+        "batchNumber": "5456",
+        "orderNumber": "546546",
+        "timeStart": "2024-08-04T13:22:04.356Z",
+        "timeEnd": "2024-08-04T13:22:04.356Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "rretre",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "ce675ce6-4b60-4eb6-96b9-9f1a0dcd6c53",
+      "packagingBatch": {
+        "line": "IMA 2",
+        "product": {
+          "id": "1",
+          "version": 1,
+          "gtin": "04630011650589",
+          "title": {
+            "ru": "Сиофор 500",
+            "en": "Siofor 500"
+          }
+        },
+        "batchNumber": "435345",
+        "orderNumber": "3435",
+        "timeStart": "2024-08-04T15:23:13.669Z",
+        "timeEnd": "2024-08-04T15:23:13.669Z",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "43534",
+        "isBatchCompletedSap": false
+      },
+      "packagingLosses": {
+        "packagingAvailabilityLosses": {
+          "cleaningTimeInMinutes": 0,
+          "settingUpOrChangingFormatTimeInMinutes": 0,
+          "repairTimeInMinutes": 0,
+          "testsTimeInMinutes": 0,
+          "staffShortageTimeInMinutes": 0,
+          "waitingForMaterialTimeInMinutes": 0,
+          "calculatingMaterialBalanceTimeInMinutes": 0,
+          "manualAggregationTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        },
+        "packagingPerformanceLosses": {
+          "packagingMaterialTimeInMinutes": 0,
+          "semiFinishedProductTimeInMinutes": 0,
+          "lossSpeedTimeInMinutes": 0,
+          "replacementOfMaterialTimeInMinutes": 0,
+          "settingsDuringOperationTimeInMinutes": 0,
+          "shortStopsTimeInMinutes": 0,
+          "longStopsTimeInMinutes": 0,
+          "otherTimeInMinutes": 0,
+          "nonDistributedDowntimeInMinutes": 0
+        },
+        "packagingQualityLosses": {
+          "repackingTimeInMinutes": 0
+        },
+        "packagingScheduledDowntime": {
+          "notOrdersTimeInMinutes": 0,
+          "lunchOrBreakOrTrainingTimeInMinutes": 0,
+          "technicalMaintenanceTimeInMinutes": 0,
+          "otherTimeInMinutes": 0
+        }
+      }
+    },
+    {
+      "id": "e4ee9248-6898-4fa2-bf16-c1463f96b9f8",
+      "packagingBatch": {
+        "packagingBatchDetails": [],
+        "line": "MA100",
+        "product": {
+          "id": "2",
+          "version": 1,
+          "gtin": "04630011650220",
+          "title": {
+            "ru": "Сиофор 850",
+            "en": "Siofor 850"
+          }
+        },
+        "batchNumber": "456546",
+        "orderNumber": "5465454",
+        "goodPacks": 0,
+        "badPacks": 0,
+        "batchNumberSap": "4444",
+        "isBatchCompletedSap": false
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {

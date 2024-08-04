@@ -9,12 +9,34 @@ export function useBatches() {
   })
 }
 
+export function useBatchById(id: string) {
+
+  return useQuery({
+    queryKey: ['batch', id],
+    queryFn: () => batchService.getBatchById(id),
+    select: data => data.data,  
+    
+  })
+}
+
 export function useCreateBatch() {
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationKey: ['createBatch'],
     mutationFn: batchService.createBatch,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
+    },
+  })
+}
+
+export function useCreateBatchDetail() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationKey: ['createBatchDetail'],
+    mutationFn: batchService.createBatchDetail,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
     },

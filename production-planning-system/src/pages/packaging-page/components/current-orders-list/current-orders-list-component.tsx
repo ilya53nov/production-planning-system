@@ -1,9 +1,12 @@
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
 import { useGetNotCompletedBatches, useUpdateBatch } from "../../../../services/hooks/useBatches";
 import CreateNewBatchFormComponent from "../create-new-batch-form/create-new-batch-form-component";
+import PackagingLinesFormComponent from "../packaging-lines-form/packaging-lines-form-component";
 
 const CurrentOrdersListComponent: React.FC = () => {
   const {data: batches, isError, error, isLoading, isSuccess} = useGetNotCompletedBatches();
   const mutation = useUpdateBatch();
+  const { isOpen, onOpen, onClose } = useDisclosure()
   
 
   if (isLoading) {
@@ -34,7 +37,21 @@ const CurrentOrdersListComponent: React.FC = () => {
 
     return (
       <div>
-        <CreateNewBatchFormComponent />
+      <Button onClick={onOpen}>Создать новый заказ</Button>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Создание нового заказа</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <CreateNewBatchFormComponent />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+
+
+        
 
         <ul>
           {batches.map((batch) => {
@@ -53,12 +70,17 @@ const CurrentOrdersListComponent: React.FC = () => {
                 {batch?.packagingBatch?.goodPacks}
               </li>
               <li key='updateButton'>
-                <button onClick={() => handleUpdateBatch(batch.id!)}>Update</button>
+                <Button onClick={() => handleUpdateBatch(batch.id!)}>Завершить заказ</Button>
               </li>
             </ul>
             )
           })}
         </ul>
+
+
+        <PackagingLinesFormComponent />
+
+        
       </div>
 
     )

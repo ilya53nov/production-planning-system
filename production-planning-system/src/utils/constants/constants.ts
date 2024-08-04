@@ -1,14 +1,15 @@
+import { PackagingStageType } from "../types/types";
+
 export interface NavItem {
   label: string;
   path: string;
 }
 
-export const initialNewBatchState = {
+export const initialNewBatchState: PackagingStageType  = {
   id: '',
   packagingBatch: {
-    date: undefined,
+    packagingBatchDetails: [],
     line: undefined,
-    shift: undefined,
     product: {
       version: 1,
       gtin: '',
@@ -19,8 +20,6 @@ export const initialNewBatchState = {
     },
     batchNumber: '',
     orderNumber: '',
-    timeStart: new Date(),
-    timeEnd: new Date(),
     goodPacks: 0,
     badPacks: 0,
     batchNumberSap: '',

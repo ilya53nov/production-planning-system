@@ -6,6 +6,7 @@ import PackagingCurrentOrdersComponent from './components/packaging-components/c
 import PackagingCompletedOrdersComponent from './components/packaging-components/completed-orders-component/completed-orders-component';
 import Navigation from './components/navigation-component/navigation-component';
 import { NavItem } from './utils/constants/constants';
+import { ChakraProvider } from '@chakra-ui/react';
 
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
 
   return (    
+    <ChakraProvider>   
       <BrowserRouter>
         <Navigation items={navItems} />
         <Routes>
@@ -27,6 +29,7 @@ const App: React.FC = () => {
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
+    </ChakraProvider>
   );
 };
 

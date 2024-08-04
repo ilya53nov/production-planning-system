@@ -5,6 +5,7 @@ import { useGetMasterData } from "../../../../services/hooks/masterData";
 
 import { initialNewBatchState } from "../../../../utils/constants/constants";
 import { Line } from "../../../../utils/types/types";
+import { Button, FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,7 +22,7 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 
 
 const CreateNewBatchFormComponent: React.FC = () => {
-  const {data: masterData, isSuccess, isLoading} = useGetMasterData();
+  const {data: masterData, isSuccess} = useGetMasterData();
   const lines = ['IMA 1', 'IMA 2', 'IMA 3', 'MA100', 'Deckert'];
 
   lines.unshift('Выберите из списка')
@@ -93,22 +94,24 @@ const CreateNewBatchFormComponent: React.FC = () => {
               }}
               children={(field) => (
                 <>
-                  <label htmlFor={field.name}>Наименование препарата:</label>
-                  <select
-                    id={field.name}
-                    name={field.name}
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                    >
-                      <option key={0} value={'Выберите из списка'}>{'Выберите из списка'}</option>
-                    {masterData.map((item) => {
-                      return(
-                        <option key={item.id} value={item.id}>{item.title.ru}</option>
-                      )
-                    })}
-                  </select>
-                  <FieldInfo field={field} />
+                  <FormControl>
+                    <FormLabel htmlFor={field.name}>Наименование препарата:</FormLabel>
+                    <Select w={'300px'}
+                      id={field.name}
+                      name={field.name}
+                      value={field.state.value}
+                      onBlur={field.handleBlur}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      >
+                        <option key={0} value={'Выберите из списка'}>{'Выберите из списка'}</option>
+                      {masterData.map((item) => {
+                        return(
+                          <option key={item.id} value={item.id}>{item.title.ru}</option>
+                        )
+                      })}
+                    </Select>
+                    <FieldInfo field={field} />
+                  </FormControl>
                 </>
               )}
             />
@@ -131,15 +134,17 @@ const CreateNewBatchFormComponent: React.FC = () => {
               }}
               children={(field) => (
                 <>
-                  <label htmlFor={field.name}>Номер заказа:</label>
-                  <input
-                    id={field.name}
-                    name={field.name}
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                  />
-                  <FieldInfo field={field} />
+                  <FormControl>
+                    <FormLabel htmlFor={field.name}>Номер заказа:</FormLabel>
+                    <Input w={'300px'}
+                      id={field.name}
+                      name={field.name}
+                      value={field.state.value}
+                      onBlur={field.handleBlur}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                    />
+                    <FieldInfo field={field} />
+                  </FormControl>
                 </>
               )}
             />
@@ -163,7 +168,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
               children={(field) => (
                 <>
                   <label htmlFor={field.name}>Номер серии:</label>
-                  <input
+                  <Input w={'300px'}
                     id={field.name}
                     name={field.name}
                     value={field.state.value}
@@ -194,7 +199,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
               children={(field) => (
                 <>
                   <label htmlFor={field.name}>Контрорльный номер ГП в SAP:</label>
-                  <input
+                  <Input w={'300px'}
                     id={field.name}
                     name={field.name}
                     value={field.state.value}
@@ -227,7 +232,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
               children={(field) => (
                 <>
                   <label htmlFor={field.name}>Упаковочная линия:</label>
-                  <select
+                  <Select w={'300px'}
                     id={field.name}
                     name={field.name}
                     value={field.state.value}
@@ -239,7 +244,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
                         <option key={item+index} value={item}>{item}</option>
                       )
                     })}
-                  </select>
+                  </Select>
                   <FieldInfo field={field} />
                 </>
               )}
@@ -250,9 +255,9 @@ const CreateNewBatchFormComponent: React.FC = () => {
             selector={(state) => [state.canSubmit, state.isSubmitting]}
             children={([canSubmit, isSubmitting]) => (
               <>
-                <button type="submit" disabled={!canSubmit}>
+                <Button type="submit" isLoading={!canSubmit} disabled={!canSubmit}>
                   {isSubmitting ? '...' : 'Создать новый заказ'}
-                </button>
+                </Button>
               </>
             )}
           />

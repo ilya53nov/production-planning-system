@@ -1,16 +1,23 @@
 export type PackagingBatchType = {
-  date?: Date | undefined,
   line?: Line | undefined,
-  shift?: Shift | undefined,
+  packagingBatchDetails?: PackagingBatchDetailType[],
   product?: ProductType | undefined,
   batchNumber?: string | undefined,
   orderNumber?: string | undefined,
-  timeStart?: Date | undefined,
-  timeEnd?: Date | undefined,
   goodPacks?: number | undefined,
   badPacks?: number | undefined,
   batchNumberSap?: string | undefined,
   isBatchCompletedSap?: boolean | undefined,
+}
+
+export type PackagingBatchDetailType = {
+  id?: string | undefined,
+  dateAndtimeStart?: Date | undefined,
+  shift?: Shift | undefined,
+  dateAndtimeEnd?: Date | undefined,
+  goodPacks?: number | undefined,
+  badPacks?: number | undefined,
+  packagingTimeInMInutes?: number | undefined,
 }
 
 
