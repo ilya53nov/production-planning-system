@@ -4,8 +4,9 @@ import { useCreateBatch } from "../../../../services/hooks/useBatches";
 import { useGetMasterData } from "../../../../services/hooks/masterData";
 
 import { initialNewBatchState } from "../../../../utils/constants/constants";
-import { Line } from "../../../../utils/types/types";
+import { Line, LinesData } from "../../../../utils/types/types";
 import { Button, FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
+import { useGetLinesData } from "../../../../services/hooks/linesData";
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,11 +22,11 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 }
 
 
-const CreateNewBatchFormComponent: React.FC = () => {
+const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
   const {data: masterData, isSuccess} = useGetMasterData();
-  const lines = ['IMA 1', 'IMA 2', 'IMA 3', 'MA100', 'Deckert'];
+  const {data: lines, isSuccess: isSuccessLines} = useGetLinesData();
 
-  lines.unshift('Выберите из списка')
+
 
   const mutation = useCreateBatch();
   
@@ -35,7 +36,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
         orderNumber: '',
         batchNumber: '',
         batchNumberSap: '',
-        line: 'Выберите из списка',
+        line: line ? line.line : 'Выберите из списка',
       },
       onSubmit: async ({ value }) => {
         const productMasterData = masterData!.filter((item) => item.id === value.productTitle)[0]
@@ -62,7 +63,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
       },
     })
 
-  if (isSuccess) {
+  if (isSuccess && isSuccessLines) {
 
     return (
       <div>
@@ -241,7 +242,7 @@ const CreateNewBatchFormComponent: React.FC = () => {
                     >
                     {lines.map((item, index) => {
                       return(
-                        <option key={item+index} value={item}>{item}</option>
+                        <option key={item.line+index} value={item.line}>{item.line}</option>
                       )
                     })}
                   </Select>

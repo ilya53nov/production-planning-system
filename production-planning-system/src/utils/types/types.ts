@@ -107,3 +107,7 @@ export type MasterData = {
     en: string,
   },
 }
+
+export type LinesData = {
+  line: string;
+}

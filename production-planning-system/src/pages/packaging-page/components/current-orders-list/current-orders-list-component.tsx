@@ -1,12 +1,10 @@
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
 import { useGetNotCompletedBatches, useUpdateBatch } from "../../../../services/hooks/useBatches";
-import CreateNewBatchFormComponent from "../create-new-batch-form/create-new-batch-form-component";
 import PackagingLinesFormComponent from "../packaging-lines-form/packaging-lines-form-component";
 
 const CurrentOrdersListComponent: React.FC = () => {
   const {data: batches, isError, error, isLoading, isSuccess} = useGetNotCompletedBatches();
   const mutation = useUpdateBatch();
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  //const { isOpen, onOpen, onClose } = useDisclosure()
   
 
   if (isLoading) {
@@ -37,7 +35,7 @@ const CurrentOrdersListComponent: React.FC = () => {
 
     return (
       <div>
-      <Button onClick={onOpen}>Создать новый заказ</Button>
+      {/* <Button onClick={onOpen}>Создать новый заказ</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -75,7 +73,7 @@ const CurrentOrdersListComponent: React.FC = () => {
             </ul>
             )
           })}
-        </ul>
+        </ul> */}
 
 
         <PackagingLinesFormComponent />
