@@ -57,13 +57,16 @@
   ],
   "linesData": [
     {
-      "line": "IMA 1"
+      "line": "IMA 1",
+      "id": "c34b"
     },
     {
-      "line": "IMA 2"
+      "line": "IMA 2",
+      "id": "b940"
     },
     {
-      "line": "IMA 3"
+      "line": "IMA 3",
+      "id": "20ac"
     }
   ],
   "batches": [
@@ -144,7 +147,7 @@
           }
         },
         "batchNumber": "5555",
-        "orderNumber": "102440101",
+        "orderNumber": "10244010",
         "timeStart": "2024-08-02T08:13:11.430Z",
         "timeEnd": "2024-08-02T08:13:11.430Z",
         "goodPacks": 6928,
@@ -690,11 +693,6 @@
     {
       "id": "23ff12ae-12da-4630-b991-9b382170a291",
       "packagingBatch": {
-        "packagingBatchDetails": [
-          {
-            "dateAndtimeStart": "2024-08-06T17:30"
-          }
-        ],
         "line": "IMA 1",
         "product": {
           "id": "6",
@@ -744,16 +742,12 @@
           "technicalMaintenanceTimeInMinutes": 0,
           "otherTimeInMinutes": 0
         }
-      }
+      },
+      "dateAndtimeStart": "2024-08-06T19:03:00.000Z"
     },
     {
       "id": "fe8d2759-c73e-44ca-bfc0-6f50927d99ec",
       "packagingBatch": {
-        "packagingBatchDetails": [
-          {
-            "dateAndtimeStart": "2024-08-06T15:30"
-          }
-        ],
         "line": "IMA 1",
         "product": {
           "id": "4",
@@ -770,6 +764,7 @@
         "badPacks": 0,
         "batchNumberSap": "234",
         "isBatchCompletedSap": false
+
       },
       "packagingLosses": {
         "packagingAvailabilityLosses": {

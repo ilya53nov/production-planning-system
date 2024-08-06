@@ -1,5 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { batchService } from "../api/api";
+import { PackagingBatchDetailType } from "../../utils/types/types";
+
 
 export function useBatches() {
   return useQuery({
@@ -36,7 +38,7 @@ export function useCreateBatchDetail() {
 
   return useMutation({
     mutationKey: ['createBatchDetail'],
-    mutationFn: batchService.createBatchDetail,
+    mutationFn: batchService.createBatchDetailTest,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
     },

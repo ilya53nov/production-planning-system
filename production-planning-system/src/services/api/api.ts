@@ -1,8 +1,13 @@
 import axios from "axios";
-import { LinesData, MasterData, PackagingStageType } from "../../utils/types/types";
+import { LinesData, MasterData, PackagingBatchDetailType, PackagingStageType } from "../../utils/types/types";
 import { v4 as uuidv4 } from 'uuid';
 
 export const BASE_URL = 'http://localhost:3123';
+
+type createBatchDetailTestProps = {
+  id: string,
+  packagingBatchDetail: PackagingBatchDetailType
+}
 
 class BatchService {
 
@@ -18,13 +23,19 @@ class BatchService {
     return axios.get<PackagingStageType[]>(`${BASE_URL}/batches?packagingBatch.isBatchCompletedSap=false`)
   }
 
-  getBatchById(id: string) {
-    return axios.get(`${BASE_URL}/batches/${id}`)
+  async getBatchById(id: string) {
+    return await axios.get<PackagingStageType>(`${BASE_URL}/batches/${id}`)
   }
 
   createBatch(batch: PackagingStageType) {
     const id = uuidv4();
     return axios.post(`${BASE_URL}/batches`, {...batch, id})
+  }
+
+
+
+  createBatchDetailTest(createBatchDetailTestProps: createBatchDetailTestProps) {
+    return axios.patch(`${BASE_URL}/batches/${createBatchDetailTestProps.id}`, createBatchDetailTestProps.packagingBatchDetail)
   }
 
   createBatchDetail(batch: PackagingStageType) {
