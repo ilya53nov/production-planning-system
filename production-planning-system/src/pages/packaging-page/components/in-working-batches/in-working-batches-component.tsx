@@ -18,7 +18,7 @@ const InWorkingBatchesComponent: React.FC<LinesData> = ({line}) => {
     return(
       <div>
         {batches.map((batch) => {
-          const {data: details, isSuccess: isSuccessDetails, isLoading: isLoadingDetails} = useGetPackagingBatchDetailByBatchId(batch.id!);
+          const {data: details, isSuccess: isSuccessDetails, isLoading: isLoadingDetails, } = useGetPackagingBatchDetailByBatchId(batch.id!);
 
           // if (isLoadingDetails) {
           //   return <span>Loading...</span>

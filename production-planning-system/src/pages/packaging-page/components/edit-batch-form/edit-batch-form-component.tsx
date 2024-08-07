@@ -22,14 +22,12 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
   const {data: batch, isSuccess, isLoading} = useBatchById(id);
   const mutation = useUpdateBatch();
 
-  if (isLoading) {
-    return <span>Loading...</span>
-  }
+
 
 
   const form = useForm({
     defaultValues: {
-      orderNumber: '',
+      orderNumber: isSuccess ? batch.orderNumber : '',
     },
     onSubmit: async ({ value }) => {
       //const productMasterData = masterData!.filter((item) => item.id === value.productTitle)[0]
@@ -47,6 +45,10 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
       )
     },
   })
+
+  if (isLoading) {
+    return <span>Loading...</span>
+  }
 
   if (isSuccess) {
     return(
@@ -70,7 +72,7 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
           onChangeAsync: async ({ value }) => {
             await new Promise((resolve) => setTimeout(resolve, 1000))
             return (
-              value.includes('error') && 'No "error" allowed in orderNumber'
+              value!.includes('error') && 'No "error" allowed in orderNumber'
             )
           },
         }}
@@ -82,7 +84,7 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
                 w={'300px'}
                 id={field.name}
                 name={field.name}
-                value={field.state.value}
+                value={field.state.value || ''}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
               />
