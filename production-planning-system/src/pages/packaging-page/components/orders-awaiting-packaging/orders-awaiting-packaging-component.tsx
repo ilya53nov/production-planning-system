@@ -53,12 +53,12 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
   }
 
   if (isSuccessBatches && isSuccessLines) {
-    const filteredBatchesByLine = batches.filter((batch) => batch.packagingBatch?.line === line);
+    const filteredBatchesByLine = batches.filter((batch) => batch.line === line);
 
 
     return(
       <div>
-        <Box width={'50%'}>
+        <Box w={'1000px'}>
           <Flex justifyContent={'space-around'}>
           {lines.map((item) => {
             return(
@@ -97,10 +97,10 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
           return(
             <div key={item.id}>
               <Grid w={'1000px'} templateColumns='repeat(6, 1fr)' gap={6} >
-                <Box w={'200px'}>{item.packagingBatch?.product?.title.ru}</Box>
-                <Box>{item.packagingBatch?.orderNumber}</Box>
-                <Box>{item.packagingBatch?.batchNumber}</Box>
-                <Box>{item.packagingBatch?.batchNumberSap}</Box>
+                <Box w={'200px'}>{item.product?.title.ru}</Box>
+                <Box>{item.orderNumber}</Box>
+                <Box>{item.batchNumber}</Box>
+                <Box>{item.batchNumberSap}</Box>
                 <Button onClick={() => {
                   setModalBody(<EditBatchModalBody batchId={item.id}/>)
                   onOpenEdit()

@@ -1,23 +1,29 @@
 export type PackagingBatchType = {
+  id?: string,
   line?: Line | undefined,
-  packagingBatchDetails?: PackagingBatchDetailType[],
   product?: ProductType | undefined,
-  batchNumber?: string | undefined,
-  orderNumber?: string | undefined,
-  goodPacks?: number | undefined,
-  badPacks?: number | undefined,
-  batchNumberSap?: string | undefined,
-  isBatchCompletedSap?: boolean | undefined,
+  batchNumber?: string,
+  orderNumber?: string,
+  goodPacks?: number,
+  badPacks?: number,
+  batchNumberSap?: string,
+  isBatchCompletedSap?: boolean,
+  packagingBatchDetails?: PackagingBatchDetailType[],
 }
 
 export type PackagingBatchDetailType = {
-  id?: string | undefined,
-  dateAndtimeStart?: Date | undefined,
+  id?: string,
+  batchId?: string,
+  dateAndtimeStart: Date,
   shift?: Shift | undefined,
   dateAndtimeEnd?: Date | undefined,
-  goodPacks?: number | undefined,
-  badPacks?: number | undefined,
-  packagingTimeInMInutes?: number | undefined,
+  goodPacks?: number,
+  badPacks?: number,
+  packagingTimeInMInutes?: number,
+  packagingAvailabilityLosses?: PackagingAvailabilityLossesType[],
+  packagingPerformanceLosses?: PackagingPerformanceLossesType[],
+  packagingQualityLosses?: PackagingQualityLossesType[],
+  packagingScheduledDowntime?: PackagingScheduledDowntimeType[],
 }
 
 
@@ -35,6 +41,8 @@ export type PackagingLossesType = {
 }
 
 export type PackagingAvailabilityLossesType = {
+  id?: string,
+  batchId?: string,
   cleaningTimeInMinutes: number,
   settingUpOrChangingFormatTimeInMinutes: number,
   repairTimeInMinutes: number,
@@ -47,6 +55,8 @@ export type PackagingAvailabilityLossesType = {
 }
 
 export type PackagingPerformanceLossesType = {
+  id?: string,
+  batchId?: string,
   packagingMaterialTimeInMinutes: number,
   semiFinishedProductTimeInMinutes: number,
   lossSpeedTimeInMinutes: number,
@@ -59,14 +69,18 @@ export type PackagingPerformanceLossesType = {
 }
 
 export type PackagingQualityLossesType = {
+  id?: string,
+  batchId?: string,
   repackingTimeInMinutes: number,
 }
 
 export type PackagingScheduledDowntimeType = {
- notOrdersTimeInMinutes: number,
- lunchOrBreakOrTrainingTimeInMinutes: number,
- technicalMaintenanceTimeInMinutes: number,
- otherTimeInMinutes: number,
+  id?: string,
+  batchId?: string,
+  notOrdersTimeInMinutes: number,
+  lunchOrBreakOrTrainingTimeInMinutes: number,
+  technicalMaintenanceTimeInMinutes: number,
+  otherTimeInMinutes: number,
 }
 
 

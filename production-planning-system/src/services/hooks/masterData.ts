@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { masterDataService } from "../api/api";
+import { masterDataService } from "../api/services/master-data-service";
 
 export function useGetMasterData() {
   return useQuery({

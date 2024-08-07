@@ -3,7 +3,7 @@ import { useCreateBatch } from "../../../../services/hooks/useBatches";
 
 import { useGetMasterData } from "../../../../services/hooks/masterData";
 
-import { initialNewBatchState } from "../../../../utils/constants/constants";
+import { initialNewBatchState, initPackagingBatch } from "../../../../utils/constants/constants";
 import { Line, LinesData } from "../../../../utils/types/types";
 import { Button, FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 import { useGetLinesData } from "../../../../services/hooks/linesData";
@@ -45,16 +45,12 @@ const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
 
         mutation.mutate(
           {
-            ...initialNewBatchState,
-            packagingBatch: {
-              ...initialNewBatchState.packagingBatch,
+            ...initPackagingBatch,            
                 product: productMasterData,
                 orderNumber: value.orderNumber,
                 batchNumber: value.batchNumber,
                 batchNumberSap: value.batchNumberSap,
-                line: value.line as Line ,
-            },
-
+                line: value.line as Line,
           },
           {
             onSuccess: () => form.reset()

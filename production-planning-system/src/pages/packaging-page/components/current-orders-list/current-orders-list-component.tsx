@@ -18,17 +18,14 @@ const CurrentOrdersListComponent: React.FC = () => {
   if (isSuccess) {
     const handleUpdateBatch = (id: string) => {
       const filteredBatch = batches.filter((batch) => batch.id === id)[0];
-      const isBatchCompletedSap = filteredBatch.packagingBatch?.isBatchCompletedSap;
+      const isBatchCompletedSap = filteredBatch.isBatchCompletedSap;
 
       console.log(isBatchCompletedSap);
 
       mutation.mutate(
         {
-          ...filteredBatch ,
-            packagingBatch: {
-              ...filteredBatch.packagingBatch,
-                isBatchCompletedSap: !isBatchCompletedSap,
-            }
+          ...filteredBatch,
+            isBatchCompletedSap: !isBatchCompletedSap,
         }
       );
     }

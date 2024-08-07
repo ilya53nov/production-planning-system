@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { batchService } from "../api/api";
+import { batchService } from "../api/services/batch-service";
 import { PackagingBatchDetailType } from "../../utils/types/types";
 
 
@@ -12,14 +12,14 @@ export function useBatches() {
 }
 
 export function useBatchById(id: string) {
-
   return useQuery({
     queryKey: ['batch', id],
     queryFn: () => batchService.getBatchById(id),
-    select: data => data.data,  
-    
+    select: data => data.data,      
   })
 }
+
+
 
 export function useCreateBatch() {
   const queryClient = useQueryClient();
@@ -33,17 +33,33 @@ export function useCreateBatch() {
   })
 }
 
-export function useCreateBatchDetail() {
-  const queryClient = useQueryClient();
-
-  return useMutation({
-    mutationKey: ['createBatchDetail'],
-    mutationFn: batchService.createBatchDetailTest,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
-    },
+export function useGetNotComletedBatchesWithPackagingDetail() {
+  return useQuery({
+    queryKey: ['notCompletedBatches'],
+    queryFn: batchService.getNotComletedBatchesWithPackagingDetail,
+    select: data => data.data,    
   })
 }
+
+export function useGetNotComletedBatchesWithPackagingDetailByLine(line: string) {
+  return useQuery({
+    queryKey: ['notCompletedBatches'],
+    queryFn: () => batchService.getNotComletedBatchesWithPackagingDetailByLine(line),
+    select: data => data.data,    
+  })
+}
+
+// export function useCreateBatchDetail() {
+//   const queryClient = useQueryClient();
+
+//   return useMutation({
+//     mutationKey: ['createBatchDetail'],
+//     mutationFn: batchService.createBatchDetailTest,
+//     onSuccess: () => {
+//       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
+//     },
+//   })
+// }
 
 export function useUpdateBatch() {
   const queryClient = useQueryClient();

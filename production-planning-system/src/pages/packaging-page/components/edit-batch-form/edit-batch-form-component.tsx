@@ -19,13 +19,17 @@ export type EditBatchFormComponentProps = {
 }
 
 const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => {
-  const {data: batch, isSuccess} = useBatchById(id);
+  const {data: batch, isSuccess, isLoading} = useBatchById(id);
   const mutation = useUpdateBatch();
+
+  if (isLoading) {
+    return <span>Loading...</span>
+  }
 
 
   const form = useForm({
     defaultValues: {
-      orderNumber: batch ?  batch?.packagingBatch?.orderNumber : '',
+      orderNumber: '',
     },
     onSubmit: async ({ value }) => {
       //const productMasterData = masterData!.filter((item) => item.id === value.productTitle)[0]
@@ -35,11 +39,7 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
       mutation.mutate(
         {
           ...batch,
-          packagingBatch: {
-            ...batch.packagingBatch,
               orderNumber: value.orderNumber,
-          },
-
         },
         {
           //onSuccess: () => form.reset()
@@ -78,7 +78,8 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
           <>
             <FormControl>
               <FormLabel htmlFor={field.name}>Номер заказа:</FormLabel>
-              <Input w={'300px'}
+              <Input
+                w={'300px'}
                 id={field.name}
                 name={field.name}
                 value={field.state.value}

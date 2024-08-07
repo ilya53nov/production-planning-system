@@ -1,5 +1,6 @@
 import { FieldApi, useForm } from "@tanstack/react-form";
-import { useBatchById, useCreateBatchDetail, useUpdateBatch } from "../../../../services/hooks/useBatches";
+import { useBatchById, useUpdateBatch } from "../../../../services/hooks/useBatches";
+import { useCreatePackagingBatchDetail } from "../../../../services/hooks/packaging-batch-detail-hook"
 import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { PackagingBatchDetailType } from "../../../../utils/types/types";
 import { v4 as uuidv4 } from 'uuid';
@@ -24,17 +25,17 @@ type StartPackagingBatchFormComponentProps = {
 const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponentProps> = ({id: batchId, closeModal}) => {
   const {data: batch, isSuccess} = useBatchById(batchId);
 
-  const initPackagingBatchDetail: PackagingBatchDetailType = {
-    dateAndtimeStart: undefined,
-    id: uuidv4(),
-    shift: undefined,
-    dateAndtimeEnd: undefined,
-    goodPacks: undefined,
-    badPacks: undefined,
-    packagingTimeInMInutes: undefined,
-  }
+  // const initPackagingBatchDetail: PackagingBatchDetailType = {
+  //   dateAndtimeStart: undefined,
+  //   id: uuidv4(),
+  //   shift: undefined,
+  //   dateAndtimeEnd: undefined,
+  //   goodPacks: undefined,
+  //   badPacks: undefined,
+  //   packagingTimeInMInutes: undefined,
+  // }
 
-  const mutation = useCreateBatchDetail();
+  const mutation = useCreatePackagingBatchDetail()
   
 
 
@@ -44,17 +45,17 @@ const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponen
       time: '',
     },
     onSubmit: async ({ value }) => {
-      const detail:PackagingBatchDetailType = {
+      const packagingBatchDetail: PackagingBatchDetailType = {
         dateAndtimeStart: new Date(`${value.date}T${value.time}`),
-        id: uuidv4(),
+        batchId: batchId,
         shift: undefined,
         dateAndtimeEnd: undefined,
-        goodPacks: undefined,
-        badPacks: undefined,
-        packagingTimeInMInutes: undefined,
+        goodPacks: 0,
+        badPacks: 0,
+        packagingTimeInMInutes: 0,
       }
 
-      mutation.mutate({id: batchId, packagingBatchDetail: detail},
+      mutation.mutate({...packagingBatchDetail},
 
         {
           onSuccess: () => closeModal(),
