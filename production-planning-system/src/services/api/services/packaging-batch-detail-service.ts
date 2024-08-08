@@ -11,11 +11,11 @@ class PackagingBatchDetailService {
 
   createPackagingBatchDetail(packagingBatchDetail: PackagingBatchDetailType) {
     const id = uuidv4();
-    return axios.post<PackagingBatchDetailType>(`${BASE_URL}/packagingBatchDetail`, {...packagingBatchDetail, id})
+    return axios.post<PackagingBatchDetailType>(`${BASE_URL}/packagingBatchDetails`, {...packagingBatchDetail, id})
   }
 
   getPackagingBatchDetailByBatchId(id: string) {
-    return axios.get<PackagingBatchDetailType[]>(`${BASE_URL}/packagingBatchDetail?batchId=${id}`)
+    return axios.get<PackagingBatchDetailType[]>(`${BASE_URL}/packagingBatchDetails?batchId=${id}`)
   }
 
 }

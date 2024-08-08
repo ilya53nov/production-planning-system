@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGetNotCompletedBatches } from "../../../../services/hooks/useBatches";
+import { useBatches, useGetNotCompletedBatches } from "../../../../services/hooks/useBatches";
 import { Box, Button, Divider, Flex, Grid, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
 import EditBatchFormComponent from "../edit-batch-form/edit-batch-form-component";
 import CreateNewBatchFormComponent from "../create-new-batch-form/create-new-batch-form-component";
@@ -7,7 +7,7 @@ import { useGetLinesData } from "../../../../services/hooks/linesData";
 import StartPackagingBatchFormComponent from "../start-packaging-batch-form/start-packaging-batch-form-component";
 
 const OrdersAwaitingPackagingComponent: React.FC = () => {
-  const {data: batches, isError, error, isLoading, isSuccess: isSuccessBatches} = useGetNotCompletedBatches();
+  const {data: batches, isError, error, isLoading, isSuccess: isSuccessBatches} = useBatches();
   const {data: lines, isSuccess: isSuccessLines} = useGetLinesData();
   const [line, setLine] = useState('IMA 1');
   const { isOpen: isOpenEdit, onOpen: onOpenEdit, onClose: onCloseEdit } = useDisclosure();
@@ -53,7 +53,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
   }
 
   if (isSuccessBatches && isSuccessLines) {
-    const filteredBatchesByLine = batches.filter((batch) => batch.line === line);
+    const filteredBatchesByLine = batches.filter((batch) => batch.isBatchCompletedSap === false && batch.line === line && batch.packagingBatchDetails!.length === 0);
 
 
     return(

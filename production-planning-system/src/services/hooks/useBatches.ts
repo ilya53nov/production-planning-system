@@ -5,7 +5,7 @@ import { PackagingBatchDetailType } from "../../utils/types/types";
 
 export function useBatches() {
   return useQuery({
-    queryKey: ['batches'],
+    queryKey: ['batches', 'notCompletedBatches'],
     queryFn: batchService.getBatches,
     select: data => data.data,    
   })
@@ -25,26 +25,27 @@ export function useCreateBatch() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationKey: ['createBatch'],
+    mutationKey: ['createBatch', 'notCompletedBatches'],
     mutationFn: batchService.createBatch,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
+      queryClient.invalidateQueries({ queryKey: ['batches'] })
     },
   })
 }
 
+// export function useGetNotComletedBatchesWithPackagingDetail() {
+//   return useQuery({
+//     queryKey: ['notCompletedBatches'],
+//     queryFn: batchService.getNotComletedBatchesWithPackagingDetail,
+//     select: data => data,    
+//   })
+// }
+
 export function useGetNotComletedBatchesWithPackagingDetail() {
   return useQuery({
     queryKey: ['notCompletedBatches'],
-    queryFn: batchService.getNotComletedBatchesWithPackagingDetail,
-    select: data => data.data,    
-  })
-}
-
-export function useGetNotComletedBatchesWithPackagingDetailByLine(line: string) {
-  return useQuery({
-    queryKey: ['notCompletedBatches'],
-    queryFn: () => batchService.getNotComletedBatchesWithPackagingDetailByLine(line),
+    queryFn: () => batchService.getNotComletedBatchesWithPackagingDetail(),
     select: data => data.data,    
   })
 }
@@ -70,6 +71,7 @@ export function useUpdateBatch() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
       queryClient.invalidateQueries({ queryKey: ['completedBatches'] })
+      queryClient.invalidateQueries({ queryKey: ['batches'] })      
     },
   })
 }

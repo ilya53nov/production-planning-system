@@ -2,6 +2,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { BASE_URL } from "../../../utils/constants/constants";
 import { PackagingBatchDetailType, PackagingBatchType } from "../../../utils/types/types";
+import { packagingBatchDetailService } from "./packaging-batch-detail-service";
 
 type createBatchDetailTestProps = {
   id: string,
@@ -11,7 +12,7 @@ type createBatchDetailTestProps = {
 class BatchService {
 
   getBatches() {
-    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches`)
+    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetails`)
   }
 
   getComletedBatches() {
@@ -26,20 +27,30 @@ class BatchService {
 
   //GET /posts?_embed=comments
 
-  getNotComletedBatchesWithPackagingDetail() {
-    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetail&isBatchCompletedSap=false`)
-  }
+  // getNotComletedBatchesWithPackagingDetail() {
+  //   const batches = axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?isBatchCompletedSap=false`);
 
-  // getNotComletedBatchesWithPackagingDetailByLine(line: string) {
-  //   return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetail&isBatchCompletedSap=false&line=${line}`)
+  //   const data = batches.map((batch) => {
+  //     const packagingBatchDetails = packagingBatchDetailService.getPackagingBatchDetailByBatchId(batch.id!)
+  //     return packagingBatchDetails;
+  //   })
+
+  //   return data;
+
+  //   //return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?isBatchCompletedSap=false`)
   // }
 
+  getNotComletedBatchesWithPackagingDetail() {
+    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetails&isBatchCompletedSap=false`)
+  }
+
   getNotComletedBatchesWithPackagingDetailByLine(line: string) {
-    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetail`)
+    return axios.get<PackagingBatchType[]>(`${BASE_URL}/batches?_embed=packagingBatchDetails&isBatchCompletedSap=false&line=${line}`)
   }
 
   getBatchById(id: string) {
-    return axios.get<PackagingBatchType>(`${BASE_URL}/batches/${id}`)
+    return axios.get<PackagingBatchType>(`${BASE_URL}/batches/${id}?_embed=packagingBatchDetail`)
+    //return axios.get<PackagingBatchType>(`${BASE_URL}/batches/${id}/packagingBatchDetail`)
   }
 
   createBatch(batch: PackagingBatchType) {

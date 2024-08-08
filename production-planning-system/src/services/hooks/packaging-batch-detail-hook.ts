@@ -5,10 +5,11 @@ export function useCreatePackagingBatchDetail() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationKey: ['createBatch'],
+    mutationKey: ['createBatchPackagingBatchDetail'],
     mutationFn: packagingBatchDetailService.createPackagingBatchDetail,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
+      queryClient.invalidateQueries({ queryKey: ['batches'] })
     },
   })
 }

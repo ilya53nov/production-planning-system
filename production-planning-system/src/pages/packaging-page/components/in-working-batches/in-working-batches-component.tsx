@@ -1,30 +1,46 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { useGetNotComletedBatchesWithPackagingDetail, useGetNotComletedBatchesWithPackagingDetailByLine } from "../../../../services/hooks/useBatches";
+import { useBatchById, useBatches, useGetNotComletedBatchesWithPackagingDetail } from "../../../../services/hooks/useBatches";
 import { LinesData } from "../../../../utils/types/types";
 import { useGetPackagingBatchDetailByBatchId } from "../../../../services/hooks/packaging-batch-detail-hook";
+import {packagingBatchDetailService} from "../../../../services/api/services/packaging-batch-detail-service"
 import dayjs from "dayjs";
+import BatchDetailsComponent from "./batch-details-component";
+import { useQueries } from "@tanstack/react-query";
 
 const InWorkingBatchesComponent: React.FC<LinesData> = ({line}) => {
-  const {data: batches, isSuccess, isLoading} = useGetNotComletedBatchesWithPackagingDetailByLine(line);
+  //const {data: batches, isSuccess, isLoading} = useGetNotComletedBatchesWithPackagingDetailByLine(line);
+
+  //const {data: test, isSuccess: isSuccessTest} = useGetNotComletedBatchesWithPackagingDetail();
+
+  // const {data: batch} = useBatchById(batches![0].id!);
+  // console.log('testBatchEmbed',batch);
+//   const batchesQueries = useQueries(
+//     batches.map(batch => ({
+//        queryKey: ['user', batch.id],
+//        queryFn: () => useGetPackagingBatchDetailByBatchId(batch.id),
+//        enabled: !!batches,
+//     }))
+//  );
+
+  const {data: batches, isLoading, isSuccess} = useBatches();
 
   if (isLoading) {
     return <span>Loading...</span>
   }
 
-  if (isSuccess) {
-    //const {} = useGetPackagingBatchDetailByBatchId();
-    console.log(batches);
+  // if (isSuccessTest) {
+    
+  // }
 
+  if (isSuccess) {
+    const notComletedAndCurrentLine = batches.filter((batch) => batch.isBatchCompletedSap === false && batch.line === line && batch.packagingBatchDetails!.length > 0)
+
+    console.log('test',notComletedAndCurrentLine)
+
+    //console.log(batchQueries);
     return(
       <div>
-        {batches.map((batch) => {
-          const {data: details, isSuccess: isSuccessDetails, isLoading: isLoadingDetails, } = useGetPackagingBatchDetailByBatchId(batch.id!);
-
-          // if (isLoadingDetails) {
-          //   return <span>Loading...</span>
-          // }
-
-          if (isSuccessDetails) {
+        {notComletedAndCurrentLine.map((batch) => {
             return(
               <ul key={batch.id}>
                 <ul>
@@ -36,7 +52,7 @@ const InWorkingBatchesComponent: React.FC<LinesData> = ({line}) => {
                   </li>
                 </ul>
                 <ul>
-                  {details.length && details.map((detailItem) => {
+                  {batch.packagingBatchDetails!.map((detailItem) => {
                     return(
                       <li key={detailItem.id}>
                         <Flex gap={'10px'}>
@@ -46,29 +62,11 @@ const InWorkingBatchesComponent: React.FC<LinesData> = ({line}) => {
                       </li>
                     )
                   })}
-  
-  
                 </ul>
+                {/* <BatchDetailsComponent id={batch.id!}  /> */}
               </ul>
-            )
-          }
-
-          
+            )          
         })}
-
-
-        {/* <ul>
-          {batches.map((batch) => {
-            return(
-              <li key={batch.id}>
-                <Flex gap={'10px'}>
-                  <Box>{batch.product?.title.ru}</Box>
-                  <Box>{batch.batchNumber}</Box>
-                </Flex>
-              </li>
-            )
-          })}
-        </ul> */}
       </div>
     )
   }
