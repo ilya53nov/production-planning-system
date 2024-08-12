@@ -1,23 +1,24 @@
 import { useState } from "react";
 import { useBatches, useGetNotCompletedBatches } from "../../../../services/hooks/useBatches";
-import { Box, Button, Divider, Flex, Grid, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
+import { Box, Button, Card, CardBody, CardHeader, Center, Divider, Flex, Grid, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, StackDivider, Tooltip, useDisclosure } from "@chakra-ui/react";
 import EditBatchFormComponent from "../edit-batch-form/edit-batch-form-component";
 import CreateNewBatchFormComponent from "../create-new-batch-form/create-new-batch-form-component";
 import { useGetLinesData } from "../../../../services/hooks/linesData";
 import StartPackagingBatchFormComponent from "../start-packaging-batch-form/start-packaging-batch-form-component";
+import { ArrowLeftIcon } from "@chakra-ui/icons";
 
 const OrdersAwaitingPackagingComponent: React.FC = () => {
   const {data: batches, isError, error, isLoading, isSuccess: isSuccessBatches} = useBatches();
-  const {data: lines, isSuccess: isSuccessLines} = useGetLinesData();
+  //const {data: lines, isSuccess: isSuccessLines} = useGetLinesData();
   const [line, setLine] = useState('IMA 1');
   const { isOpen: isOpenEdit, onOpen: onOpenEdit, onClose: onCloseEdit } = useDisclosure();
 
-  const CreatBatchModalBody = () => (
+  const CreateBatchModalBody = () => (
     <ModalContent>
       <ModalHeader>Создание нового заказа</ModalHeader>
       <ModalCloseButton />
       <ModalBody>
-        <CreateNewBatchFormComponent line={line}/>
+        <CreateNewBatchFormComponent line={''}/>
       </ModalBody>
     </ModalContent>
   )
@@ -42,7 +43,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
     </ModalContent>    
   )
 
-  const [modalBody, setModalBody] = useState(<CreatBatchModalBody />);
+  const [modalBody, setModalBody] = useState(<CreateBatchModalBody />);
 
   if (isLoading) {
     <span>Loading...</span>
@@ -52,36 +53,19 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
     <span>Error: {error.message}</span>
   }
 
-  if (isSuccessBatches && isSuccessLines) {
-    const filteredBatchesByLine = batches.filter((batch) => batch.isBatchCompletedSap === false && batch.line === line && batch.packagingBatchDetails!.length === 0);
-
+  if (isSuccessBatches) {
+    const filteredBatches = batches.filter((batch) => batch.isBatchCompletedSap === false && batch.packagingBatchDetails!.length === 0);
+    const lines = [...new Set(batches.map((batch) => batch.line))];    
 
     return(
       <div>
-        <Box w={'1000px'}>
-          <Flex justifyContent={'space-around'}>
-          {lines.map((item) => {
-            return(
-              <Box 
-                key={item.line}
-                textAlign={'center'}
-                width={'150px'}
-                borderBottom={'2px'}
-                borderColor={item.line === line ? 'blue' : 'red'}
-                cursor={'pointer'}
-                fontSize={'large'}
-                fontWeight={item.line === line ? '700' : '400'}
-                _hover={{ borderBottom:'2px', borderColor:'blue' }}
-                onClick={() => setLine(item.line)}>{item.line}</Box>
-            )
-          })}
-          </Flex>
-        </Box>
-
-        <Button onClick={() => {
-                setModalBody(<CreatBatchModalBody />)
-                onOpenEdit()
-              }}>создать новый заказ</Button>
+        <Flex justifyContent={"center"}>
+          <Button textTransform={"uppercase"} colorScheme="teal" onClick={() => {
+                  setModalBody(<CreateBatchModalBody />)
+                  onOpenEdit()
+                }}>создать новый заказ
+          </Button>
+        </Flex>
 
         <Modal isOpen={isOpenEdit} onClose={onCloseEdit}>
           <ModalOverlay 
@@ -93,27 +77,62 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
             {modalBody}
         </Modal>
 
-        {filteredBatchesByLine.map((item) => {
+        {lines.map((line) => {
+          const filteredBatchesByLine = filteredBatches.filter((batch) => batch.line === line);
+
           return(
-            <div key={item.id}>
-              <Grid w={'1000px'} templateColumns='repeat(6, 1fr)' gap={6} >
-                <Box w={'200px'}>{item.product?.title.ru}</Box>
-                <Box>{item.orderNumber}</Box>
-                <Box>{item.batchNumber}</Box>
-                <Box>{item.batchNumberSap}</Box>
-                <Button onClick={() => {
-                  setModalBody(<EditBatchModalBody batchId={item.id}/>)
-                  onOpenEdit()
-                }}>редактировать</Button>
-                <Button onClick={() => {
-                  setModalBody(<StartPackagingBatchModalBody batchId={item.id}/>)
-                  onOpenEdit()
-                }}>старт</Button>
-              </Grid>
-              <Divider orientation='horizontal' />
-            </div>
+            <Card key={line} mt={"10px"}>
+              <CardHeader>
+                <Heading size='md'>{line}</Heading>
+              </CardHeader>
+
+              <CardBody>
+                <Stack divider={<StackDivider />} spacing='4'>
+                  
+                    {filteredBatchesByLine.map((item) => {
+                      return(
+                        <Box key={item.id}>
+                          <Flex  _hover={{color: 'blue.600'}} >
+                            
+                              <Tooltip label='Начать заказ'>
+                                <Center onClick={() => {
+                                      setModalBody(<StartPackagingBatchModalBody batchId={item.id}/>)
+                                      onOpenEdit()
+                                    }}
+                                    cursor={"pointer"}>
+                                  <ArrowLeftIcon color={"teal"}/>
+                                </Center>
+                              </Tooltip>
+                            
+                            <Flex onClick={() => {
+                                setModalBody(<EditBatchModalBody batchId={item.id}/>)
+                                onOpenEdit()
+                              }}
+                              cursor={"pointer"}   
+                              direction={"column"}             
+                            >
+                              <Heading pl={"10px"} size='xs' textTransform='uppercase'>
+                                {item.product?.title.ru}
+                              </Heading>
+
+                              <Flex>
+                                <Box pl={"10px"}>Серия: {item.batchNumber}</Box>
+                                <Box pl={"10px"}>Заказ: {item.orderNumber}</Box>
+                                <Box pl={"10px"}>Заказ SAP: {item.batchNumberSap}</Box>
+                              </Flex>
+                            </Flex>
+
+                          </Flex>
+                        </Box>
+                      )
+                    })}  
+                                    
+                </Stack>
+              </CardBody>
+            </Card>
+
           )
-        })}  
+        })}        
       </div>
     )
   }

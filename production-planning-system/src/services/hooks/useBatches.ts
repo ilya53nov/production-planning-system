@@ -15,7 +15,8 @@ export function useBatchById(id: string) {
   return useQuery({
     queryKey: ['batch', id],
     queryFn: () => batchService.getBatchById(id),
-    select: data => data.data,      
+    select: data => data.data,
+    enabled: !!id,
   })
 }
 

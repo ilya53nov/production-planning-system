@@ -77,6 +77,14 @@
       "goodPacks": 0,
       "badPacks": 0,
       "packagingTimeInMInutes": 0
+    },
+    {
+      "id": "e0ffeb20-ebeb-4d79-b0b0-052fb0dab825",
+      "dateAndtimeStart": "2024-08-12T14:00:00.000Z",
+      "batchId": "3b2fdc38-e092-42f0-8380-a35261935a8f",
+      "goodPacks": 0,
+      "badPacks": 0,
+      "packagingTimeInMInutes": 0
     }
   ],
   "batches": [
@@ -88,7 +96,7 @@
       "goodPacks": 0,
       "isBatchCompletedSap": false,
       "line": "IMA 1",
-      "orderNumber": "1023457",
+      "orderNumber": "1023458",
       "packagingBatchDetails": [
         {
           "badPacks": 0,
@@ -245,6 +253,158 @@
         {
           "badPacks": 0,
           "dateAndtimeStart": "2024-08-08T12:50:00.245Z",
+          "goodPacks": 0,
+          "packagingAvailabilityLosses": [
+            {
+              "cleaningTimeInMinutes": 0,
+              "settingUpOrChangingFormatTimeInMinutes": 0,
+              "repairTimeInMinutes": 0,
+              "testsTimeInMinutes": 0,
+              "staffShortageTimeInMinutes": 0,
+              "waitingForMaterialTimeInMinutes": 0,
+              "calculatingMaterialBalanceTimeInMinutes": 0,
+              "manualAggregationTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingPerformanceLosses": [
+            {
+              "packagingMaterialTimeInMinutes": 0,
+              "semiFinishedProductTimeInMinutes": 0,
+              "lossSpeedTimeInMinutes": 0,
+              "replacementOfMaterialTimeInMinutes": 0,
+              "settingsDuringOperationTimeInMinutes": 0,
+              "shortStopsTimeInMinutes": 0,
+              "longStopsTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "nonDistributedDowntimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingQualityLosses": [
+            {
+              "repackingTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingScheduledDowntime": [
+            {
+              "notOrdersTimeInMinutes": 0,
+              "lunchOrBreakOrTrainingTimeInMinutes": 0,
+              "technicalMaintenanceTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingTimeInMInutes": 0,
+          "batchId": "",
+          "id": ""
+        }
+      ],
+      "product": {
+        "id": "6",
+        "version": 1,
+        "gtin": "04630011650084",
+        "title": {
+          "ru": "Простамол 30",
+          "en": "Prostamol 30"
+        }
+      }
+    },
+    {
+      "id": "3b2fdc38-e092-42f0-8380-a35261935a8f",
+      "badPacks": 0,
+      "batchNumber": "0450624",
+      "batchNumberSap": "13SSS",
+      "goodPacks": 0,
+      "isBatchCompletedSap": false,
+      "line": "IMA 1",
+      "orderNumber": "1034563",
+      "packagingBatchDetails": [
+        {
+          "badPacks": 0,
+          "dateAndtimeStart": "2024-08-12T10:47:34.384Z",
+          "goodPacks": 0,
+          "packagingAvailabilityLosses": [
+            {
+              "cleaningTimeInMinutes": 0,
+              "settingUpOrChangingFormatTimeInMinutes": 0,
+              "repairTimeInMinutes": 0,
+              "testsTimeInMinutes": 0,
+              "staffShortageTimeInMinutes": 0,
+              "waitingForMaterialTimeInMinutes": 0,
+              "calculatingMaterialBalanceTimeInMinutes": 0,
+              "manualAggregationTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingPerformanceLosses": [
+            {
+              "packagingMaterialTimeInMinutes": 0,
+              "semiFinishedProductTimeInMinutes": 0,
+              "lossSpeedTimeInMinutes": 0,
+              "replacementOfMaterialTimeInMinutes": 0,
+              "settingsDuringOperationTimeInMinutes": 0,
+              "shortStopsTimeInMinutes": 0,
+              "longStopsTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "nonDistributedDowntimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingQualityLosses": [
+            {
+              "repackingTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingScheduledDowntime": [
+            {
+              "notOrdersTimeInMinutes": 0,
+              "lunchOrBreakOrTrainingTimeInMinutes": 0,
+              "technicalMaintenanceTimeInMinutes": 0,
+              "otherTimeInMinutes": 0,
+              "batchId": "",
+              "id": ""
+            }
+          ],
+          "packagingTimeInMInutes": 0,
+          "batchId": "",
+          "id": ""
+        }
+      ],
+      "product": {
+        "id": "4",
+        "version": 1,
+        "gtin": "04630011650428",
+        "title": {
+          "ru": "Мезим 20",
+          "en": "Mezum 20"
+        }
+      }
+    },
+    {
+      "id": "1812ae64-84ef-4ad5-8cf9-5c32b30f0335",
+      "badPacks": 0,
+      "batchNumber": "0340824",
+      "batchNumberSap": "18HJK",
+      "goodPacks": 0,
+      "isBatchCompletedSap": false,
+      "line": "IMA 3",
+      "orderNumber": "1045682",
+      "packagingBatchDetails": [
+        {
+          "badPacks": 0,
+          "dateAndtimeStart": "2024-08-12T12:04:47.306Z",
           "goodPacks": 0,
           "packagingAvailabilityLosses": [
             {
