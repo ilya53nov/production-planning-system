@@ -15,7 +15,7 @@ export type PackagingBatchDetailType = {
   id?: string,
   batchId?: string,
   dateAndtimeStart: Date,
-  shift?: Shift | undefined,
+  shift?: string,
   dateAndtimeEnd?: Date | undefined,
   goodPacks?: number,
   badPacks?: number,

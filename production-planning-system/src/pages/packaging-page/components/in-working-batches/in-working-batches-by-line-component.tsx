@@ -6,6 +6,8 @@ import {packagingBatchDetailService} from "../../../../services/api/services/pac
 import dayjs from "dayjs";
 import BatchDetailsComponent from "./batch-details-component";
 import { useQueries } from "@tanstack/react-query";
+import BatchDetail from "./batch-detail";
+import { useMemo } from "react";
 
 const InWorkingBatchesByLineComponent: React.FC<LinesData> = ({line}) => {
   const {data: batches, isLoading, isSuccess} = useBatches();
@@ -34,15 +36,13 @@ const InWorkingBatchesByLineComponent: React.FC<LinesData> = ({line}) => {
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
                     {item.packagingBatchDetails?.map((detailsItem) => {
+                      
+
                       return(
-                        <Box key={detailsItem.id}>
-                          <Flex  _hover={{color: 'blue.600'}} >                              
-                            <Box pl={"10px"}>{dayjs(detailsItem.dateAndtimeStart).format('DD.MM.YYYY')}</Box>
-                            <Box pl={"10px"}>{dayjs(detailsItem.dateAndtimeStart).format('HH:mm')}</Box>
-                            <Box pl={"10px"}>{detailsItem.shift}</Box>
-                            <Box pl={"10px"}>{detailsItem.goodPacks}</Box>               
-                          </Flex>
-                        </Box>
+                        // <BatchDetailsComponent {...detailsItem} key={detailsItem.id}/>
+                        <BatchDetailsComponent key={detailsItem.id}>
+                          <BatchDetail {...detailsItem}/>
+                        </BatchDetailsComponent>
                       )
                     })}
                                     

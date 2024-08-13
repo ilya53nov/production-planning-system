@@ -20,7 +20,7 @@ const PackagingLinesFormComponent: React.FC = () => {
           {lines.map((item) => {
             return(
 
-              <Button px={"50px"} isActive={item.line === line} colorScheme="teal" onClick={() => setLine(item.line)}>
+              <Button key={item.line} px={"50px"} isActive={item.line === line} colorScheme="teal" onClick={() => setLine(item.line)}>
                 {item.line}
               </Button>
             )

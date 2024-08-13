@@ -74,6 +74,7 @@
       "id": "1fd14c8a-341d-4d0b-8530-cbc29f01d8a5",
       "dateAndtimeStart": "2024-08-08T12:00:00.000Z",
       "batchId": "e36ef1b0-80cc-46cc-830b-cf2a8e8057ab",
+      "shift": "1",
       "goodPacks": 0,
       "badPacks": 0,
       "packagingTimeInMInutes": 0
@@ -82,6 +83,7 @@
       "id": "e0ffeb20-ebeb-4d79-b0b0-052fb0dab825",
       "dateAndtimeStart": "2024-08-12T14:00:00.000Z",
       "batchId": "3b2fdc38-e092-42f0-8380-a35261935a8f",
+      "shift": "1",
       "goodPacks": 0,
       "badPacks": 0,
       "packagingTimeInMInutes": 0

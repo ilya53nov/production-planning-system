@@ -94,7 +94,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
                         <Box key={item.id}>
                           <Flex  _hover={{color: 'blue.600'}} >
                             
-                              <Tooltip label='Начать заказ'>
+                              <Tooltip label='Запустить заказ'>
                                 <Center onClick={() => {
                                       setModalBody(<StartPackagingBatchModalBody batchId={item.id}/>)
                                       onOpenEdit()
@@ -118,7 +118,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
                               <Flex>
                                 <Box pl={"10px"}>Серия: {item.batchNumber}</Box>
                                 <Box pl={"10px"}>Заказ: {item.orderNumber}</Box>
-                                <Box pl={"10px"}>Заказ SAP: {item.batchNumberSap}</Box>
+                                <Box pl={"10px"}>Номер ГП SAP: {item.batchNumberSap}</Box>
                               </Flex>
                             </Flex>
 

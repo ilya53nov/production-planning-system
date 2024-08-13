@@ -1,9 +1,6 @@
 import { FieldApi, useForm } from "@tanstack/react-form";
-import { useBatchById, useUpdateBatch } from "../../../../services/hooks/useBatches";
-import { useCreatePackagingBatchDetail } from "../../../../services/hooks/packaging-batch-detail-hook"
+import { PackagingBatchDetailType, Shift } from "../../../../utils/types/types";
 import { Button, FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
-import { PackagingBatchDetailType } from "../../../../utils/types/types";
-import { v4 as uuidv4 } from 'uuid';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
@@ -13,49 +10,41 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
         <em>{field.state.meta.errors.join(',')}</em>
       ) : null}
       {field.state.meta.isValidating ? 'Проверка поля...' : null}
-    </>
+    </> 
   )
 }
 
-type StartPackagingBatchFormComponentProps = {
-  id: string,
-  closeModal: () => void,
-}
-
-const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponentProps> = ({id: batchId, closeModal}) => {
-  const {data: batch, isSuccess} = useBatchById(batchId);
-
-  const mutation = useCreatePackagingBatchDetail()
+const EditDetailsByBatchComponent: React.FC<PackagingBatchDetailType> = (props: PackagingBatchDetailType) => {
+  const {id, dateAndtimeStart, shift, goodPacks} = props;
 
   const form = useForm({
     defaultValues: {
-      dateAndtimeStart: '',
-      shift: '',
+      dateAndtimeStart: new Date(dateAndtimeStart).toLocaleDateString(),
+      shift: shift,
     },
-    onSubmit: async ({ value }) => {
-      const packagingBatchDetail: PackagingBatchDetailType = {
-        dateAndtimeStart: new Date(value.dateAndtimeStart),
-        batchId: batchId,
-        shift: undefined,
-        dateAndtimeEnd: undefined,
-        goodPacks: 0,
-        badPacks: 0,
-        packagingTimeInMInutes: 0,
-      }
+    // onSubmit: async ({ value }) => {
+    //   const packagingBatchDetail: PackagingBatchDetailType = {
+    //     dateAndtimeStart: new Date(value.dateAndtimeStart),
+    //     batchId: batchId,
+    //     shift: undefined,
+    //     dateAndtimeEnd: undefined,
+    //     goodPacks: 0,
+    //     badPacks: 0,
+    //     packagingTimeInMInutes: 0,
+    //   }
 
-      mutation.mutate({...packagingBatchDetail},
+    //   mutation.mutate({...packagingBatchDetail},
 
-        {
-          onSuccess: () => closeModal(),
-          onError: (err) => console.log(err.message)
-        }
-      )
-    },
+    //     {
+    //       onSuccess: () => closeModal(),
+    //       onError: (err) => console.log(err.message)
+    //     }
+    //   )
+    // },
   })
 
-  if (isSuccess) {
-    return(
-    <div>
+  return(
+<div>
     <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -88,7 +77,7 @@ const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponen
                 w={'300px'}
                 id={field.name}
                 name={field.name}
-                value={field.state.value}
+                value={field.state.value || new Date().toLocaleDateString()}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
               />
@@ -111,7 +100,7 @@ const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponen
           onChangeAsync: async ({ value }) => {
             await new Promise((resolve) => setTimeout(resolve, 1000))
             return (
-              value.includes('error') && 'No "error" allowed in orderNumber'
+              value!.includes('error') && 'No "error" allowed in orderNumber'
             )
           },
         }}
@@ -122,7 +111,7 @@ const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponen
               <Select w={'300px'}
                 id={field.name}
                 name={field.name}
-                value={field.state.value}
+                value={field.state.value || ''}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
                 >
@@ -144,16 +133,14 @@ const StartPackagingBatchFormComponent: React.FC<StartPackagingBatchFormComponen
     children={([canSubmit, isSubmitting]) => (
       <>
         <Button type="submit" isLoading={!canSubmit} disabled={!canSubmit}>
-          {isSubmitting ? '...' : 'Запустить заказ'}
+          {isSubmitting ? '...' : 'Редактировать'}
         </Button>
       </>
     )}
     />
     </form>
     </div>
-    )
-    
-  }
+  )
 }
 
-export default StartPackagingBatchFormComponent;
+export default EditDetailsByBatchComponent;
