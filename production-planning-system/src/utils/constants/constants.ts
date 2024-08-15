@@ -1,6 +1,7 @@
 import { PackagingAvailabilityLossesType, PackagingBatchDetailType, PackagingBatchType, PackagingPerformanceLossesType, PackagingQualityLossesType, PackagingScheduledDowntimeType, PackagingStageType } from "../types/types";
 
 export const BASE_URL = 'http://localhost:3123';
+export const MASTER_DATA_BASE_URL = 'http://localhost:3124';
 
 
 export interface NavItem {

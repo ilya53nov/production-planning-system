@@ -72,21 +72,23 @@
   "packagingBatchDetails": [
     {
       "id": "1fd14c8a-341d-4d0b-8530-cbc29f01d8a5",
-      "dateAndtimeStart": "2024-08-08T12:00:00.000Z",
+      "dateAndtimeStart": "2024-08-08T15:00",
       "batchId": "e36ef1b0-80cc-46cc-830b-cf2a8e8057ab",
       "shift": "1",
-      "goodPacks": 0,
-      "badPacks": 0,
-      "packagingTimeInMInutes": 0
+      "goodPacks": 5001,
+      "badPacks": 32,
+      "packagingTimeInMInutes": 0,
+      "dateAndtimeEnd": "2024-08-15T11:00"
     },
     {
       "id": "e0ffeb20-ebeb-4d79-b0b0-052fb0dab825",
-      "dateAndtimeStart": "2024-08-12T14:00:00.000Z",
+      "dateAndtimeStart": "2024-08-12T17:00",
       "batchId": "3b2fdc38-e092-42f0-8380-a35261935a8f",
       "shift": "1",
-      "goodPacks": 0,
-      "badPacks": 0,
-      "packagingTimeInMInutes": 0
+      "goodPacks": 32,
+      "badPacks": 1,
+      "packagingTimeInMInutes": 0,
+      "dateAndtimeEnd": "2024-08-15T11:12"
     }
   ],
   "batches": [
@@ -98,7 +100,7 @@
       "goodPacks": 0,
       "isBatchCompletedSap": false,
       "line": "IMA 1",
-      "orderNumber": "1023458",
+      "orderNumber": "1023457",
       "packagingBatchDetails": [
         {
           "badPacks": 0,
@@ -402,7 +404,7 @@
       "goodPacks": 0,
       "isBatchCompletedSap": false,
       "line": "IMA 3",
-      "orderNumber": "1045682",
+      "orderNumber": "1045681",
       "packagingBatchDetails": [
         {
           "badPacks": 0,

@@ -1,6 +1,6 @@
 import { FieldApi, useForm } from "@tanstack/react-form"
 import { useBatchById, useUpdateBatch } from "../../../../services/hooks/useBatches";
-import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormLabel, Input, useToast } from "@chakra-ui/react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
@@ -67,19 +67,21 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
           onChange: ({ value }) =>
             !value
               ? 'Обязательное поле'
-              : undefined,
+              : value.length > 7
+                ? 'Количество символов должно быть меньше 7'
+                : undefined,
           onChangeAsyncDebounceMs: 500,
-          onChangeAsync: async ({ value }) => {
-            await new Promise((resolve) => setTimeout(resolve, 1000))
-            return (
-              value!.includes('error') && 'No "error" allowed in orderNumber'
-            )
-          },
+          // onChangeAsync: async ({ value }) => {
+          //   await new Promise((resolve) => setTimeout(resolve, 1000))
+          //   return (
+          //     value!.includes('error') && 'No "error" allowed in orderNumber'
+          //   )
+          // },
         }}
         children={(field) => (
           <>
             <FormControl>
-              <FormLabel htmlFor={field.name}>Номер заказа:</FormLabel>
+              <FormLabel htmlFor={field.name}>Номер заказа:</FormLabel>              
               <Input
                 w={'300px'}
                 id={field.name}
@@ -88,7 +90,7 @@ const EditBatchFormComponent: React.FC<EditBatchFormComponentProps> = ({id}) => 
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
               />
-              <FieldInfo field={field} />
+              <Box h={"30px"}><FieldInfo field={field} /></Box>
             </FormControl>
           </>
         )}

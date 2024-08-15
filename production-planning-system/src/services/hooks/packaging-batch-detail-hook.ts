@@ -21,3 +21,17 @@ export function useGetPackagingBatchDetailByBatchId(id: string) {
     select: data => data.data,      
   })
 }
+
+export function useUpdatePackagingBatchDetails() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationKey: ['updateBatchDetails'],
+    mutationFn: packagingBatchDetailService.updatePackagingBatchDetails,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['notCompletedBatches'] })
+      queryClient.invalidateQueries({ queryKey: ['completedBatches'] })
+      queryClient.invalidateQueries({ queryKey: ['batches'] })      
+    },
+  })
+}

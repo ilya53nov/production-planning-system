@@ -9,4 +9,8 @@ class MasterDataService {
   }
 }
 
-export const masterDataService = new MasterDataService()
+export const masterDataService = new MasterDataService();
+
+
+
+

@@ -122,6 +122,7 @@ export type MasterData = {
   },
 }
 
-export type LinesData = {
-  line: string;
-}
+// export type LinesData = {
+//   line: string;
+// }
+

@@ -18,6 +18,10 @@ class PackagingBatchDetailService {
     return axios.get<PackagingBatchDetailType[]>(`${BASE_URL}/packagingBatchDetails?batchId=${id}`)
   }
 
+  updatePackagingBatchDetails(batchDetail: PackagingBatchDetailType) {
+    return axios.patch<PackagingBatchDetailType>(`${BASE_URL}/packagingBatchDetails/${batchDetail.id}`, batchDetail)
+  }
+
 }
 
 export const packagingBatchDetailService = new PackagingBatchDetailService()

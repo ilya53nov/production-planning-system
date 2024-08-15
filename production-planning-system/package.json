@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start:dev": "npm-run-all --parallel mock:server dev",
+    "start:dev": "npm-run-all --parallel mock:server masterData:server dev",
     "dev": "vite",
     "mock:server": "json-server ./src/utils/mocks/db.json --port 3123",
+    "masterData:server": "json-server ./src/utils/mocks/master-data-db.json --port 3124",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

@@ -7,12 +7,14 @@ import PackagingCompletedOrdersComponent from './components/packaging-components
 import Navigation from './components/navigation-component/navigation-component';
 import { NavItem } from './utils/constants/constants';
 import { ChakraProvider } from '@chakra-ui/react';
+import MasterDataPage from './pages/master-data-page/master-data-page';
 
 
 const App: React.FC = () => {
   const navItems: NavItem[] = [
     { label: 'Home', path: '/' },
     { label: 'Packaging', path: '/packaging' },
+    { label: 'Master Data ', path: '/master-data' },
   ];
 
 
@@ -26,6 +28,7 @@ const App: React.FC = () => {
             <Route path='current-orders' element={<PackagingCurrentOrdersComponent />} />
             <Route path='completed-orders' element={<PackagingCompletedOrdersComponent />} />          
           </Route>
+          <Route path='/master-data' element={<MasterDataPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

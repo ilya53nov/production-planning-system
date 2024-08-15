@@ -35,12 +35,10 @@ const InWorkingBatchesByLineComponent: React.FC<LinesData> = ({line}) => {
 
               <CardBody>
                 <Stack divider={<StackDivider />} spacing='4'>
-                    {item.packagingBatchDetails?.map((detailsItem) => {
-                      
-
+                    {item.packagingBatchDetails?.map((detailsItem) => {                
                       return(
                         // <BatchDetailsComponent {...detailsItem} key={detailsItem.id}/>
-                        <BatchDetailsComponent key={detailsItem.id}>
+                        <BatchDetailsComponent key={detailsItem.id} batchDetailsListItem={detailsItem} batchInfo={item} >
                           <BatchDetail {...detailsItem}/>
                         </BatchDetailsComponent>
                       )
