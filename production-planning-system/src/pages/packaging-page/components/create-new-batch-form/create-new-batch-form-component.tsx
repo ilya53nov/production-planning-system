@@ -4,9 +4,10 @@ import { useCreateBatch } from "../../../../services/hooks/useBatches";
 import { useGetMasterData } from "../../../../services/hooks/masterData";
 
 import { initialNewBatchState, initPackagingBatch } from "../../../../utils/constants/constants";
-import { Line, LinesData } from "../../../../utils/types/types";
+
 import { Button, FormControl, FormLabel, Input, Select } from "@chakra-ui/react";
 import { useGetLinesData } from "../../../../services/hooks/linesData";
+import { LinesData } from "../../../../utils/types/master-data-types";
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,7 +23,7 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 }
 
 
-const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
+const CreateNewBatchFormComponent: React.FC = () => {
   const {data: masterData, isSuccess} = useGetMasterData();
   const {data: lines, isSuccess: isSuccessLines} = useGetLinesData();
 
@@ -36,10 +37,11 @@ const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
         orderNumber: '',
         batchNumber: '',
         batchNumberSap: '',
-        line: line ? line.line : 'Выберите из списка',
+        line: lines ? lines[0].title : 'Выберите из списка',
       },
       onSubmit: async ({ value }) => {
         const productMasterData = masterData!.filter((item) => item.id === value.productTitle)[0]
+        const filteredLine = lines?.filter((line) => line.title === value.line)[0];
 
         console.log(value)
 
@@ -50,7 +52,7 @@ const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
                 orderNumber: value.orderNumber,
                 batchNumber: value.batchNumber,
                 batchNumberSap: value.batchNumberSap,
-                line: value.line as Line,
+                line: filteredLine as LinesData,
           },
           {
             onSuccess: () => form.reset()
@@ -236,9 +238,9 @@ const CreateNewBatchFormComponent: React.FC<LinesData> = (line?: LinesData) => {
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     >
-                    {lines.map((item, index) => {
+                    {lines.map((line) => {
                       return(
-                        <option key={item.line+index} value={item.line}>{item.line}</option>
+                        <option key={line.id} value={line.title}>{line.title}</option>
                       )
                     })}
                   </Select>

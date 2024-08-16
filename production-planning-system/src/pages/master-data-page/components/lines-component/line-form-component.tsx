@@ -1,6 +1,6 @@
 import { FieldApi, useForm } from "@tanstack/react-form";
 import { LineCategoryEnum, LinesData, PackagingTypeEnum } from "../../../../utils/types/master-data-types";
-import { useCreateLineData } from "../../../../services/hooks/linesData";
+import { useCreateLineData, useUpdateLineData } from "../../../../services/hooks/linesData";
 import { Button, Checkbox, Flex, FormControl, FormLabel, Input, Radio, RadioGroup, Select, Stack } from "@chakra-ui/react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -15,19 +15,50 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
   )
 }
 
+type LineFormComponentProps = {
+  isNew: boolean,
+  onClose: () => void,
+  line?: LinesData,
+}
 
-const CreateNewLineFormComponent: React.FC = () => {
+const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, line}:LineFormComponentProps) => {
   const lineCategories = Object.values(LineCategoryEnum);
-  const mutation = useCreateLineData();
+  const create = useCreateLineData();
+  const update = useUpdateLineData();
+
+  const handleSubmit = (lineData: LinesData) => {
+    if (isNew) {
+      create.mutate({...lineData},
+        {
+          onSuccess: () => {
+            form.reset();
+            onClose();
+          } 
+        }
+      )
+    } else {
+      const submitData = Object.assign(line ? {...line} : {}, {...lineData})
+
+      update.mutate({data: submitData, id: submitData.id!},
+        {
+          onSuccess: () => {
+            form.reset();
+            onClose();
+          } 
+        }
+      )
+    }
+
+  }
   
     const form = useForm({
       defaultValues: {
-        title: '',
-        isBlister: false,
-        isBottle: false,
-        category: '' as LineCategoryEnum,
+        title: isNew ? '' : line?.title,
+        isBlister: isNew ? false : line && line?.type.filter((type) => type === PackagingTypeEnum.blister).length > 0,
+        isBottle: isNew ? false : line && line?.type.filter((type) => type === PackagingTypeEnum.bottle).length > 0,
+        category: isNew ? '' as LineCategoryEnum : line?.category,
       },
-      onSubmit: async ({ value }) => {    
+      onSubmit: async ({ value }) => {
         const typeItems: PackagingTypeEnum[] = [];
 
         if (value.isBlister) {
@@ -37,27 +68,44 @@ const CreateNewLineFormComponent: React.FC = () => {
         if (value.isBottle) {
           typeItems.push(PackagingTypeEnum.bottle)
         }
-        
-        const lineData: LinesData= {
-          category: value.category,
-          title: value.title,
-          type: typeItems,
-        }   
 
-        mutation.mutate(
-          {
-            ...lineData
-          },
-          {
-            onSuccess: () => form.reset()
-          }
-        )
+        const lineData: LinesData= {
+          category: value.category as LineCategoryEnum,
+          title: value.title as string,
+          type: typeItems,
+        }
+
+        
+
+        handleSubmit(lineData);
+
+        // if (isNew) {
+        //   create.mutate({...lineData},
+        //     {
+        //       onSuccess: () => {
+        //         form.reset();
+        //         onClose();
+        //       } 
+        //     }
+        //   )
+        // }
+        
+        // if (!isNew) {
+        //   update.mutate({...lineData},
+        //     {
+        //       onSuccess: () => {
+        //         form.reset();
+        //         onClose();
+        //       } 
+        //     }
+        //   )
+        // }
+
       },
     })
 
     return (
-      <div>
-        <h1>Simple Form Example</h1>
+      <div>        
         <form
           onSubmit={(e) => {
             e.preventDefault()
@@ -80,7 +128,7 @@ const CreateNewLineFormComponent: React.FC = () => {
                   <FormControl>
                     <FormLabel htmlFor={field.name}>Категория:</FormLabel>
 
-                    <RadioGroup onChange={(e) => field.handleChange(e as LineCategoryEnum)}>
+                    <RadioGroup defaultValue={line && line.category} onChange={(e) => field.handleChange(e as LineCategoryEnum)}>
                       <Flex direction={"column"}>
                       {lineCategories.map((category) => {
                         return(
@@ -134,10 +182,10 @@ const CreateNewLineFormComponent: React.FC = () => {
                   <label htmlFor={field.name}>Блистер ?:</label>
                   <Checkbox
                     id={field.name}
-                    name={field.name}
-                    checked={field.state.value}             
+                    name={field.name}            
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.checked)}
+                    isChecked={field.state.value}  
                   />
                   <FieldInfo field={field} />
                 </>
@@ -155,10 +203,10 @@ const CreateNewLineFormComponent: React.FC = () => {
                   <label htmlFor={field.name}>Флакон ?:</label>
                   <Checkbox
                     id={field.name}
-                    name={field.name}
-                    checked={field.state.value}             
+                    name={field.name}                                
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.checked)}
+                    isChecked={field.state.value}      
                   />
                   <FieldInfo field={field} />
                 </>
@@ -171,7 +219,7 @@ const CreateNewLineFormComponent: React.FC = () => {
             children={([canSubmit, isSubmitting]) => (
               <>
                 <Button type="submit" isLoading={!canSubmit} disabled={!canSubmit}>
-                  {isSubmitting ? '...' : 'Создать'}
+                  {isSubmitting ? '...' :  isNew ? 'Добавить данные' : 'Сохранить'}
                 </Button>
               </>
             )}
@@ -183,4 +231,4 @@ const CreateNewLineFormComponent: React.FC = () => {
 
 }
 
-export default CreateNewLineFormComponent;
+export default LineFormComponent;

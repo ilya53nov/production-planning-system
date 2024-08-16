@@ -18,7 +18,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
       <ModalHeader>Создание нового заказа</ModalHeader>
       <ModalCloseButton />
       <ModalBody>
-        <CreateNewBatchFormComponent line={''}/>
+        <CreateNewBatchFormComponent />
       </ModalBody>
     </ModalContent>
   )
@@ -55,7 +55,7 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
 
   if (isSuccessBatches) {
     const filteredBatches = batches.filter((batch) => batch.isBatchCompletedSap === false && batch.packagingBatchDetails!.length === 0);
-    const lines = [...new Set(batches.map((batch) => batch.line))];    
+    const lines = [...new Set(batches.map((batch) => batch.line?.title))];    
 
     return(
       <div>
@@ -77,11 +77,11 @@ const OrdersAwaitingPackagingComponent: React.FC = () => {
             {modalBody}
         </Modal>
 
-        {lines.map((line) => {
-          const filteredBatchesByLine = filteredBatches.filter((batch) => batch.line === line);
+        {lines.map((line, index) => {
+          const filteredBatchesByLine = filteredBatches.filter((batch) => batch.line?.title === line);
 
           return(
-            <Card key={line} mt={"10px"}>
+            <Card key={`${line}${index}`} mt={"10px"}>
               <CardHeader>
                 <Heading size='md'>{line}</Heading>
               </CardHeader>

@@ -17,11 +17,11 @@ const PackagingLinesFormComponent: React.FC = () => {
       <>
         <Flex gap={"10px"} justifyContent={"center"}>
 
-          {lines.map((item) => {
+          {lines.map((lineItem) => {
             return(
 
-              <Button key={item.line} px={"50px"} isActive={item.line === line} colorScheme="teal" onClick={() => setLine(item.line)}>
-                {item.line}
+              <Button key={lineItem.id} px={"50px"} isActive={lineItem.title === line} colorScheme="teal" onClick={() => setLine(lineItem.title)}>
+                {lineItem.title}
               </Button>
             )
           })}

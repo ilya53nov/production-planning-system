@@ -5,6 +5,8 @@ import { useGetLinesData } from "../../../../services/hooks/linesData";
 const LinesComponent:  React.FC = () => {
   const {data: lines, isError, error, isLoading, isSuccess} = useGetLinesData();
 
+  console.log(lines)
+
   if (isError) {
     return <Box>Error: {error.message}</Box>
   }
