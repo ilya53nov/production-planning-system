@@ -1,13 +1,40 @@
 {
+  "productsData": [
+    {
+      "id": "43628874-3f52-41fb-8dff-31e531835977",
+      "title": {
+        "ru": "iuiuoiu",
+        "en": "kj;lkjlkjl"
+      },
+      "type": "Блистер",
+      "lineCategory": [
+        "yuyu"
+      ],
+      "lineScheme": []
+    },
+    {
+      "id": "796278fb-b904-49a0-885a-9e2b80b62c3f",
+      "title": {
+        "ru": "gjhgjhg",
+        "en": "l;;lk;lkj;"
+      },
+      "type": "Блистер",
+      "lineCategory": [
+        "lkhbhg",
+        "fffff"
+      ],
+      "lineScheme": []
+    }
+  ],
   "linesData": [
     {
       "id": "3fb57a45-a46f-4e7d-b3cf-397515b5597a",
-      "category": "Вторичная упаковка",
+      "category": "Первичная + вторичная упаковка",
       "title": "IMA 1",
       "type": [
-        "Блистер",
-        "Флакон"
-      ]
+        "Блистер"
+      ],
+      "number": 1
     },
     {
       "id": "31356947-a9c6-459f-a08d-18fdd3d5b050",
@@ -15,7 +42,8 @@
       "title": "IMA 2",
       "type": [
         "Блистер"
-      ]
+      ],
+      "number": 2
     },
     {
       "id": "6eaf1f65-cb9b-46db-bcf0-cebff9c6e11b",
@@ -24,7 +52,8 @@
       "type": [
         "Блистер",
         "Флакон"
-      ]
+      ],
+      "number": 5
     },
     {
       "id": "74180f3d-8d01-4790-ad08-11933fb43b66",
@@ -32,7 +61,17 @@
       "title": "Deckert",
       "type": [
         "Флакон"
-      ]
+      ],
+      "number": 4
+    },
+    {
+      "id": "ae72a017-5a92-49f0-af51-c84f1f41de46",
+      "category": "Первичная + вторичная упаковка",
+      "title": "IMA 3",
+      "type": [
+        "Блистер"
+      ],
+      "number": 3
     }
   ]
 }

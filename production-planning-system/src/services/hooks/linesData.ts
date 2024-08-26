@@ -1,9 +1,9 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { LinesData } from "../../utils/types/master-data-types";
+import { LineData } from "../../utils/types/master-data-types";
 import DataService from "../api/services/data-service";
 import { MASTER_DATA_BASE_URL } from "../../utils/constants/constants";
 
-const linesDataService = new DataService<LinesData>(MASTER_DATA_BASE_URL, 'linesData');
+const linesDataService = new DataService<LineData>(MASTER_DATA_BASE_URL, 'linesData');
 
 export function useGetLinesData() {
   return useQuery({
@@ -18,7 +18,7 @@ export function useCreateLineData() {
 
   return useMutation({
     mutationKey: ['lines'],
-    mutationFn: (data: LinesData) => linesDataService.create(data),
+    mutationFn: (data: LineData) => linesDataService.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['lines'] })
     },
@@ -29,7 +29,7 @@ export function useUpdateLineData() {
   const queryClient = useQueryClient();
 
   type props = {
-    data: LinesData,
+    data: LineData,
     id: string,
   }
 

@@ -1,6 +1,5 @@
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { useGetLinesData } from "../../../../services/hooks/linesData"
-import { LinesData } from "../../../../utils/types/master-data-types"
 import CardLineComponent from "./card-line-component";
 
 const CardsLineComponent: React.FC = () => {

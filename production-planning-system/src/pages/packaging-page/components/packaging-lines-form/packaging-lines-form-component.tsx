@@ -3,6 +3,7 @@ import OrdersAwaitingPackagingComponent from "../orders-awaiting-packaging/order
 import InWorkingBatchesByLineComponent from "../in-working-batches/in-working-batches-by-line-component";
 import { useGetLinesData } from "../../../../services/hooks/linesData";
 import { useState } from "react";
+import { LineCategoryEnum } from "../../../../utils/types/master-data-types";
 
 const PackagingLinesFormComponent: React.FC = () => {
   const {data: lines, isLoading, isSuccess} = useGetLinesData();
@@ -13,11 +14,12 @@ const PackagingLinesFormComponent: React.FC = () => {
   }
 
   if (isSuccess) {
+    const sortedLines = lines.sort((prev, next) => prev.number - next.number)
     return(
       <>
         <Flex gap={"10px"} justifyContent={"center"}>
 
-          {lines.map((lineItem) => {
+          {sortedLines.map((lineItem) => {
             return(
 
               <Button key={lineItem.id} px={"50px"} isActive={lineItem.title === line} colorScheme="teal" onClick={() => setLine(lineItem.title)}>

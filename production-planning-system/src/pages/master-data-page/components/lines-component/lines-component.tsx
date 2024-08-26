@@ -1,33 +1,15 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
-import { useGetLinesData } from "../../../../services/hooks/linesData";
+import ModalCreateLineComponent from "./modal-create-line-component";
+import CardsLineComponent from "./cards-line-component";
 
-const LinesComponent:  React.FC = () => {
-  const {data: lines, isError, error, isLoading, isSuccess} = useGetLinesData();
-
-  console.log(lines)
-
-  if (isError) {
-    return <Box>Error: {error.message}</Box>
-  }
-
-  if (isLoading) {
-    return <Box>Loading...</Box>
-  }
-
-  if (isSuccess) {
-    return(
-      <Flex direction={"column"}>
-      {lines.map((line) => {
-        return(
-          <Flex key={line.id}>
-            <Box>{line.title}</Box>
-          </Flex>
-        )
-      })}
-      </Flex>
-    )
-  }
+const LinesComponent: React.FC = () => {  
+  return(
+    <Box>
+      <ModalCreateLineComponent />
+      <CardsLineComponent />
+    </Box>
+  )  
 }
 
 export default LinesComponent;

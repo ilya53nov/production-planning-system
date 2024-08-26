@@ -1,8 +1,8 @@
-import { LinesData } from "./master-data-types"
+import { LineData } from "./master-data-types"
 
 export type PackagingBatchType = {
   id?: string,
-  line?: LinesData | undefined,
+  line?: LineData | undefined,
   product?: ProductType | undefined,
   batchNumber?: string,
   orderNumber?: string,

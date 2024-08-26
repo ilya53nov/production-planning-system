@@ -1,8 +1,8 @@
 import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
-import { LinesData } from "../../../../utils/types/master-data-types";
+import { LineData } from "../../../../utils/types/master-data-types";
 import LineFormComponent from "./line-form-component";
 
-const ModalEditLineComponent: React.FC<LinesData> = (line: LinesData) => {
+const ModalEditLineComponent: React.FC<LineData> = (line: LineData) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return(

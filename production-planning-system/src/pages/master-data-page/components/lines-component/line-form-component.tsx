@@ -1,5 +1,5 @@
 import { FieldApi, useForm } from "@tanstack/react-form";
-import { LineCategoryEnum, LinesData, PackagingTypeEnum } from "../../../../utils/types/master-data-types";
+import { LineCategoryEnum, LineData, PackagingTypeEnum } from "../../../../utils/types/master-data-types";
 import { useCreateLineData, useUpdateLineData } from "../../../../services/hooks/linesData";
 import { Button, Checkbox, Flex, FormControl, FormLabel, Input, Radio, RadioGroup, Select, Stack } from "@chakra-ui/react";
 
@@ -18,7 +18,7 @@ function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
 type LineFormComponentProps = {
   isNew: boolean,
   onClose: () => void,
-  line?: LinesData,
+  line?: LineData,
 }
 
 const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, line}:LineFormComponentProps) => {
@@ -26,7 +26,7 @@ const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, li
   const create = useCreateLineData();
   const update = useUpdateLineData();
 
-  const handleSubmit = (lineData: LinesData) => {
+  const handleSubmit = (lineData: LineData) => {
     if (isNew) {
       create.mutate({...lineData},
         {
@@ -57,6 +57,7 @@ const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, li
         isBlister: isNew ? false : line && line?.type.filter((type) => type === PackagingTypeEnum.blister).length > 0,
         isBottle: isNew ? false : line && line?.type.filter((type) => type === PackagingTypeEnum.bottle).length > 0,
         category: isNew ? '' as LineCategoryEnum : line?.category,
+        number: isNew ? 0 : line?.number,
       },
       onSubmit: async ({ value }) => {
         const typeItems: PackagingTypeEnum[] = [];
@@ -69,38 +70,14 @@ const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, li
           typeItems.push(PackagingTypeEnum.bottle)
         }
 
-        const lineData: LinesData= {
+        const lineData: LineData= {
           category: value.category as LineCategoryEnum,
           title: value.title as string,
           type: typeItems,
-        }
-
-        
+          number: value.number!,
+        }       
 
         handleSubmit(lineData);
-
-        // if (isNew) {
-        //   create.mutate({...lineData},
-        //     {
-        //       onSuccess: () => {
-        //         form.reset();
-        //         onClose();
-        //       } 
-        //     }
-        //   )
-        // }
-        
-        // if (!isNew) {
-        //   update.mutate({...lineData},
-        //     {
-        //       onSuccess: () => {
-        //         form.reset();
-        //         onClose();
-        //       } 
-        //     }
-        //   )
-        // }
-
       },
     })
 
@@ -164,6 +141,33 @@ const LineFormComponent: React.FC<LineFormComponentProps> = ({isNew, onClose, li
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
+                    />
+                    <FieldInfo field={field} />
+                  </FormControl>
+                </>
+              )}
+            />
+          </div>
+          <div>
+            <form.Field
+              name="number"
+              validators={{
+                onChange: ({ value }) =>
+                  !value
+                    ? 'Обязательное поле'
+                    : undefined,
+                onChangeAsyncDebounceMs: 500,
+              }}
+              children={(field) => (
+                <>
+                  <FormControl>
+                    <FormLabel htmlFor={field.name}>Номер линии:</FormLabel>
+                    <Input w={'300px'}
+                      id={field.name}
+                      name={field.name}
+                      value={field.state.value}
+                      onBlur={field.handleBlur}
+                      onChange={(e) => field.handleChange(Number(e.target.value))}
                     />
                     <FieldInfo field={field} />
                   </FormControl>
